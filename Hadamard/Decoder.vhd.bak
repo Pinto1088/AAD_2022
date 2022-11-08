@@ -1,0 +1,49 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.all;
+use IEEE.NUMERIC_STD.all;
+
+entity Decoder is
+
+	port (yIn  : in  std_logic_vector(7 downto 0);
+			msOut: out std_logic_vector(2 downto 0);
+			valid: out std_logic);
+	
+end Decoder;
+
+architecture Struct of Decoder is
+
+	signal c11,c12,c13,c14 : std_logic;
+	signal c21,c22,c23,c24 : std_logic;
+	signal c31,c32,c33,c34 : std_logic;
+	begin
+	
+	process (yIn)
+	begin
+	
+	c11 <= yIn(0) xor yIn(1);
+	c12 <= yIn(2) xor yIn(3);
+	c13 <= yIn(4) xor yIn(5);
+	c14 <= yIn(6) xor yIn(7);
+	c21 <= yIn(0) xor yIn(2);
+	c22 <= yIn(1) xor yIn(3);
+	c23 <= yIn(4) xor yIn(6);
+	c24 <= yIn(5) xor yIn(7);
+	c31 <= yIn(0) xor yIn(4);
+	c32 <= yIn(1) xor yIn(5);
+	c33 <= yIn(2) xor yIn(6);
+	c34 <= yIn(3) xor yIn(7);
+	
+	if(c11 + c12 + c13 + c14 = 2) then
+	valid <= 0;
+	
+	elsif (c11 + c12 + c13 + c14 < 2) then	
+	msOut(0) <= 0;
+	
+	else
+	msOut <= 1;
+	end if;
+	
+	
+	end process;
+
+end Struct;
