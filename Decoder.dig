@@ -1294,12 +1294,12 @@ Full-Adder</string>
           <int>48</int>
         </entry>
         <entry>
-          <string>Label</string>
-          <string>Based on Reed Muller</string>
-        </entry>
-        <entry>
           <string>RectHeight</string>
           <int>84</int>
+        </entry>
+        <entry>
+          <string>Label</string>
+          <string>Based on Reed Decoder</string>
         </entry>
         <entry>
           <string>RectWidth</string>
