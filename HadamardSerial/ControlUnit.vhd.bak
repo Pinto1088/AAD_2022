@@ -1,0 +1,20 @@
+library IEEE;
+use.IEEE.STD_LOGIC_1164.all;
+use.IEEE.NUMERIC_STD.all;
+
+entity ControlUnit is
+port();
+end ControlUnit;
+
+architecture controller of ControlUnit is
+
+type states is(start, s_first, s_second, s_third, s_forth)
+signal Pstate, Nstate: states;
+begin
+
+process(clk)
+begin
+
+
+end process;
+end controller;

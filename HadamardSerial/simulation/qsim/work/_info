@@ -1,0 +1,147 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/pinto/Documents/Universidade/AAD/Assigments/HadamardSerial/simulation/qsim
+Eencoderserial
+Z1 w1668358588
+Z2 DPx9 cycloneiv 19 cycloneiv_atom_pack 0 22 <z:=^zLc?_L<65bN0V5Ho0
+Z3 DPx9 cycloneiv 20 cycloneiv_components 0 22 _F^j:l?dZ0Xmd_Z]?K7Gg1
+Z4 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+Z5 DPx6 altera 11 dffeas_pack 0 22 :S1C`o89Vbe5bV6`:6CaB3
+Z6 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+Z7 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z8 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z9 DPx6 altera 28 altera_primitives_components 0 22 z?[99Tn<@QGNik3V1c6ah1
+R0
+Z10 8HadamardSerial.vho
+Z11 FHadamardSerial.vho
+l0
+L79
+VzLZZP5Z5bb7dn5E>nfF5U2
+!s100 SJoSUaPSI:ofE^5Z[^cDf2
+Z12 OV;C;10.5b;63
+32
+Z13 !s110 1668358589
+!i10b 1
+Z14 !s108 1668358589.000000
+Z15 !s90 -work|work|HadamardSerial.vho|
+Z16 !s107 HadamardSerial.vho|
+!i113 1
+Z17 o-work work
+Z18 tExplicit 1 CvgOpt 0
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+R9
+DEx4 work 13 encoderserial 0 22 zLZZP5Z5bb7dn5E>nfF5U2
+l190
+L102
+VkW<WC2Al]CMA1AU1o<2<G1
+!s100 fR<R5jGCT<AUl]RFQKC9e1
+R12
+32
+R13
+!i10b 1
+R14
+R15
+R16
+!i113 1
+R17
+R18
+Eencoderserial_vhd_vec_tst
+R1
+R7
+R8
+R0
+Z19 8Waveform3.vwf.vht
+Z20 FWaveform3.vwf.vht
+l0
+L31
+V?TY7k8KDzMmJAQS`hC71T1
+!s100 _DlLcBO:_aZG>NfG66WnO0
+R12
+32
+R13
+!i10b 1
+R14
+Z21 !s90 -work|work|Waveform3.vwf.vht|
+Z22 !s107 Waveform3.vwf.vht|
+!i113 1
+R17
+R18
+Aencoderserial_arch
+R7
+R8
+Z23 DEx4 work 25 encoderserial_vhd_vec_tst 0 22 ?TY7k8KDzMmJAQS`hC71T1
+l48
+L33
+Z24 VcS8nBUgaSXaVS@JJK?miD2
+Z25 !s100 L:[<:n8G`AJi^Xi`>41141
+R12
+32
+R13
+!i10b 1
+R14
+R21
+R22
+!i113 1
+R17
+R18
+Ehard_block
+R1
+R4
+R2
+R6
+R7
+R8
+R3
+R0
+R10
+R11
+l0
+L34
+Vc_zG6gj]l9@McI1b^mKMk3
+!s100 ePBnogNIYclWVmd<QYN@33
+R12
+32
+R13
+!i10b 1
+R14
+R15
+R16
+!i113 1
+R17
+R18
+Astructure
+R4
+R2
+R6
+R7
+R8
+R3
+DEx4 work 10 hard_block 0 22 c_zG6gj]l9@McI1b^mKMk3
+l64
+L50
+V^TJfMN143Hleg=oLnW2^A1
+!s100 9XRhD6F>^g=RX1;2c[R1L2
+R12
+32
+R13
+!i10b 1
+R14
+R15
+R16
+!i113 1
+R17
+R18

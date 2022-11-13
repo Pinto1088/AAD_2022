@@ -1,0 +1,211 @@
+|EncoderSerial
+clk => controlunit:ControlUnit.clk
+clk => flipflopdpet:flipFlopDPET.clk
+clk => flipflopdpet:flipFlopDPET0.clk
+clk => flipflopdpet:flipFlopDPET1.clk
+clk => flipflopdpet:flipFlopDPET2.clk
+clk => flipflopdpet:flipFlopDPET3.clk
+clk => flipflopdpet:flipFlopDPET4.clk
+clk => flipflopdpet:flipFlopDPET5.clk
+clk => flipflopdpet:flipFlopDPET6.clk
+clk => flipflopdpet:flipFlopDPET7.clk
+nRst => controlunit:ControlUnit.nRST
+nRst => flipflopdpet:flipFlopDPET.nRst
+nRst => flipflopdpet:flipFlopDPET0.nRst
+nRst => flipflopdpet:flipFlopDPET1.nRst
+nRst => flipflopdpet:flipFlopDPET2.nRst
+nRst => flipflopdpet:flipFlopDPET3.nRst
+nRst => flipflopdpet:flipFlopDPET4.nRst
+nRst => flipflopdpet:flipFlopDPET5.nRst
+nRst => flipflopdpet:flipFlopDPET6.nRst
+nRst => flipflopdpet:flipFlopDPET7.nRst
+nRst => flipflopdpet:flipFlopF0.nRst
+nRst => flipflopdpet:flipFlopF1.nRst
+nRst => flipflopdpet:flipFlopF2.nRst
+nRst => flipflopdpet:flipFlopF3.nRst
+nRst => flipflopdpet:flipFlopF4.nRst
+nRst => flipflopdpet:flipFlopF5.nRst
+nRst => flipflopdpet:flipFlopF6.nRst
+nRst => flipflopdpet:flipFlopF7.nRst
+mIn => flipflopdpet:flipFlopDPET.D
+mOut[0] <= flipflopdpet:flipFlopF0.Q
+mOut[1] <= flipflopdpet:flipFlopF1.Q
+mOut[2] <= flipflopdpet:flipFlopF2.Q
+mOut[3] <= flipflopdpet:flipFlopF3.Q
+mOut[4] <= flipflopdpet:flipFlopF4.Q
+mOut[5] <= flipflopdpet:flipFlopF5.Q
+mOut[6] <= flipflopdpet:flipFlopF6.Q
+mOut[7] <= flipflopdpet:flipFlopF7.Q
+
+
+|EncoderSerial|ControlUnit:ControlUnit
+clk => Pstate~1.DATAIN
+clk_alt <= clk_alt.DB_MAX_OUTPUT_PORT_TYPE
+nRST => Pstate.OUTPUTSELECT
+nRST => Pstate.OUTPUTSELECT
+nRST => Pstate.OUTPUTSELECT
+nRST => Pstate.OUTPUTSELECT
+nRST => Pstate.OUTPUTSELECT
+xOut[0] <= xOut[0].DB_MAX_OUTPUT_PORT_TYPE
+xOut[1] <= xOut.DB_MAX_OUTPUT_PORT_TYPE
+xOut[2] <= xOut.DB_MAX_OUTPUT_PORT_TYPE
+xOut[3] <= xOut.DB_MAX_OUTPUT_PORT_TYPE
+xOut[4] <= xOut.DB_MAX_OUTPUT_PORT_TYPE
+xOut[5] <= xOut.DB_MAX_OUTPUT_PORT_TYPE
+xOut[6] <= xOut.DB_MAX_OUTPUT_PORT_TYPE
+xOut[7] <= xOut[7].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderSerial|flipFlopDPET:flipFlopDPET
+clk => Q~reg0.CLK
+D => Q~reg0.DATAIN
+nSet => Q.IN0
+nRst => Q.IN1
+nRst => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderSerial|flipFlopDPET:flipFlopDPET0
+clk => Q~reg0.CLK
+D => Q~reg0.DATAIN
+nSet => Q.IN0
+nRst => Q.IN1
+nRst => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderSerial|flipFlopDPET:flipFlopDPET1
+clk => Q~reg0.CLK
+D => Q~reg0.DATAIN
+nSet => Q.IN0
+nRst => Q.IN1
+nRst => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderSerial|flipFlopDPET:flipFlopDPET2
+clk => Q~reg0.CLK
+D => Q~reg0.DATAIN
+nSet => Q.IN0
+nRst => Q.IN1
+nRst => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderSerial|flipFlopDPET:flipFlopDPET3
+clk => Q~reg0.CLK
+D => Q~reg0.DATAIN
+nSet => Q.IN0
+nRst => Q.IN1
+nRst => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderSerial|flipFlopDPET:flipFlopDPET4
+clk => Q~reg0.CLK
+D => Q~reg0.DATAIN
+nSet => Q.IN0
+nRst => Q.IN1
+nRst => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderSerial|flipFlopDPET:flipFlopDPET5
+clk => Q~reg0.CLK
+D => Q~reg0.DATAIN
+nSet => Q.IN0
+nRst => Q.IN1
+nRst => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderSerial|flipFlopDPET:flipFlopDPET6
+clk => Q~reg0.CLK
+D => Q~reg0.DATAIN
+nSet => Q.IN0
+nRst => Q.IN1
+nRst => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderSerial|flipFlopDPET:flipFlopDPET7
+clk => Q~reg0.CLK
+D => Q~reg0.DATAIN
+nSet => Q.IN0
+nRst => Q.IN1
+nRst => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderSerial|flipFlopDPET:flipFlopF0
+clk => Q~reg0.CLK
+D => Q~reg0.DATAIN
+nSet => Q.IN0
+nRst => Q.IN1
+nRst => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderSerial|flipFlopDPET:flipFlopF1
+clk => Q~reg0.CLK
+D => Q~reg0.DATAIN
+nSet => Q.IN0
+nRst => Q.IN1
+nRst => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderSerial|flipFlopDPET:flipFlopF2
+clk => Q~reg0.CLK
+D => Q~reg0.DATAIN
+nSet => Q.IN0
+nRst => Q.IN1
+nRst => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderSerial|flipFlopDPET:flipFlopF3
+clk => Q~reg0.CLK
+D => Q~reg0.DATAIN
+nSet => Q.IN0
+nRst => Q.IN1
+nRst => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderSerial|flipFlopDPET:flipFlopF4
+clk => Q~reg0.CLK
+D => Q~reg0.DATAIN
+nSet => Q.IN0
+nRst => Q.IN1
+nRst => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderSerial|flipFlopDPET:flipFlopF5
+clk => Q~reg0.CLK
+D => Q~reg0.DATAIN
+nSet => Q.IN0
+nRst => Q.IN1
+nRst => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderSerial|flipFlopDPET:flipFlopF6
+clk => Q~reg0.CLK
+D => Q~reg0.DATAIN
+nSet => Q.IN0
+nRst => Q.IN1
+nRst => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderSerial|flipFlopDPET:flipFlopF7
+clk => Q~reg0.CLK
+D => Q~reg0.DATAIN
+nSet => Q.IN0
+nRst => Q.IN1
+nRst => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

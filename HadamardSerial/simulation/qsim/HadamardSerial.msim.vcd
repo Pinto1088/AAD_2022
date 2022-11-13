@@ -1,0 +1,444 @@
+$comment
+	File created using the following command:
+		vcd file HadamardSerial.msim.vcd -direction
+$end
+$date
+	Sun Nov 13 16:56:29 2022
+$end
+$version
+	ModelSim Version 10.5b
+$end
+$timescale
+	1ps
+$end
+
+$scope module encoderserial_vhd_vec_tst $end
+$var wire 1 ! clk $end
+$var wire 1 " mIn $end
+$var wire 1 # mOut [7] $end
+$var wire 1 $ mOut [6] $end
+$var wire 1 % mOut [5] $end
+$var wire 1 & mOut [4] $end
+$var wire 1 ' mOut [3] $end
+$var wire 1 ( mOut [2] $end
+$var wire 1 ) mOut [1] $end
+$var wire 1 * mOut [0] $end
+$var wire 1 + nRst $end
+
+$scope module i1 $end
+$var wire 1 , gnd $end
+$var wire 1 - vcc $end
+$var wire 1 . unknown $end
+$var wire 1 / devoe $end
+$var wire 1 0 devclrn $end
+$var wire 1 1 devpor $end
+$var wire 1 2 ww_devoe $end
+$var wire 1 3 ww_devclrn $end
+$var wire 1 4 ww_devpor $end
+$var wire 1 5 ww_clk $end
+$var wire 1 6 ww_nRst $end
+$var wire 1 7 ww_mIn $end
+$var wire 1 8 ww_mOut [7] $end
+$var wire 1 9 ww_mOut [6] $end
+$var wire 1 : ww_mOut [5] $end
+$var wire 1 ; ww_mOut [4] $end
+$var wire 1 < ww_mOut [3] $end
+$var wire 1 = ww_mOut [2] $end
+$var wire 1 > ww_mOut [1] $end
+$var wire 1 ? ww_mOut [0] $end
+$var wire 1 @ \nRst~inputclkctrl_INCLK_bus\ [3] $end
+$var wire 1 A \nRst~inputclkctrl_INCLK_bus\ [2] $end
+$var wire 1 B \nRst~inputclkctrl_INCLK_bus\ [1] $end
+$var wire 1 C \nRst~inputclkctrl_INCLK_bus\ [0] $end
+$var wire 1 D \clk~inputclkctrl_INCLK_bus\ [3] $end
+$var wire 1 E \clk~inputclkctrl_INCLK_bus\ [2] $end
+$var wire 1 F \clk~inputclkctrl_INCLK_bus\ [1] $end
+$var wire 1 G \clk~inputclkctrl_INCLK_bus\ [0] $end
+$var wire 1 H \ControlUnit|Pstate.s_3~clkctrl_INCLK_bus\ [3] $end
+$var wire 1 I \ControlUnit|Pstate.s_3~clkctrl_INCLK_bus\ [2] $end
+$var wire 1 J \ControlUnit|Pstate.s_3~clkctrl_INCLK_bus\ [1] $end
+$var wire 1 K \ControlUnit|Pstate.s_3~clkctrl_INCLK_bus\ [0] $end
+$var wire 1 L \mOut[0]~output_o\ $end
+$var wire 1 M \mOut[1]~output_o\ $end
+$var wire 1 N \mOut[2]~output_o\ $end
+$var wire 1 O \mOut[3]~output_o\ $end
+$var wire 1 P \mOut[4]~output_o\ $end
+$var wire 1 Q \mOut[5]~output_o\ $end
+$var wire 1 R \mOut[6]~output_o\ $end
+$var wire 1 S \mOut[7]~output_o\ $end
+$var wire 1 T \clk~input_o\ $end
+$var wire 1 U \clk~inputclkctrl_outclk\ $end
+$var wire 1 V \nRst~input_o\ $end
+$var wire 1 W \ControlUnit|Pstate~8_combout\ $end
+$var wire 1 X \ControlUnit|Pstate.s_rst~feeder_combout\ $end
+$var wire 1 Y \ControlUnit|Pstate.s_rst~q\ $end
+$var wire 1 Z \ControlUnit|Pstate~10_combout\ $end
+$var wire 1 [ \ControlUnit|Pstate.s_0~q\ $end
+$var wire 1 \ \ControlUnit|Pstate~11_combout\ $end
+$var wire 1 ] \ControlUnit|Pstate.s_1~q\ $end
+$var wire 1 ^ \ControlUnit|Pstate~9_combout\ $end
+$var wire 1 _ \ControlUnit|Pstate.s_2~q\ $end
+$var wire 1 ` \ControlUnit|Pstate~7_combout\ $end
+$var wire 1 a \ControlUnit|Pstate.s_3~q\ $end
+$var wire 1 b \ControlUnit|Pstate.s_3~clkctrl_outclk\ $end
+$var wire 1 c \mIn~input_o\ $end
+$var wire 1 d \flipFlopDPET|Q~feeder_combout\ $end
+$var wire 1 e \nRst~inputclkctrl_outclk\ $end
+$var wire 1 f \flipFlopDPET|Q~q\ $end
+$var wire 1 g \flipFlopDPET0|Q~0_combout\ $end
+$var wire 1 h \flipFlopDPET0|Q~feeder_combout\ $end
+$var wire 1 i \flipFlopDPET0|Q~q\ $end
+$var wire 1 j \flipFlopF0|Q~q\ $end
+$var wire 1 k \flipFlopDPET1|Q~0_combout\ $end
+$var wire 1 l \flipFlopDPET1|Q~feeder_combout\ $end
+$var wire 1 m \flipFlopDPET1|Q~q\ $end
+$var wire 1 n \flipFlopF1|Q~feeder_combout\ $end
+$var wire 1 o \flipFlopF1|Q~q\ $end
+$var wire 1 p \flipFlopDPET2|Q~0_combout\ $end
+$var wire 1 q \flipFlopDPET2|Q~feeder_combout\ $end
+$var wire 1 r \flipFlopDPET2|Q~q\ $end
+$var wire 1 s \flipFlopF2|Q~q\ $end
+$var wire 1 t \flipFlopDPET3|Q~0_combout\ $end
+$var wire 1 u \flipFlopDPET3|Q~feeder_combout\ $end
+$var wire 1 v \flipFlopDPET3|Q~q\ $end
+$var wire 1 w \flipFlopF3|Q~q\ $end
+$var wire 1 x \flipFlopDPET4|Q~0_combout\ $end
+$var wire 1 y \flipFlopDPET4|Q~feeder_combout\ $end
+$var wire 1 z \flipFlopDPET4|Q~q\ $end
+$var wire 1 { \flipFlopF4|Q~q\ $end
+$var wire 1 | \flipFlopDPET5|Q~0_combout\ $end
+$var wire 1 } \flipFlopDPET5|Q~feeder_combout\ $end
+$var wire 1 ~ \flipFlopDPET5|Q~q\ $end
+$var wire 1 !! \flipFlopF5|Q~feeder_combout\ $end
+$var wire 1 "! \flipFlopF5|Q~q\ $end
+$var wire 1 #! \flipFlopDPET6|Q~0_combout\ $end
+$var wire 1 $! \flipFlopDPET6|Q~feeder_combout\ $end
+$var wire 1 %! \flipFlopDPET6|Q~q\ $end
+$var wire 1 &! \flipFlopF6|Q~feeder_combout\ $end
+$var wire 1 '! \flipFlopF6|Q~q\ $end
+$var wire 1 (! \flipFlopDPET7|Q~0_combout\ $end
+$var wire 1 )! \flipFlopDPET7|Q~feeder_combout\ $end
+$var wire 1 *! \flipFlopDPET7|Q~q\ $end
+$var wire 1 +! \flipFlopF7|Q~feeder_combout\ $end
+$var wire 1 ,! \flipFlopF7|Q~q\ $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0!
+0"
+1+
+0,
+1-
+x.
+1/
+10
+11
+12
+13
+14
+05
+16
+07
+0L
+0M
+0N
+0O
+0P
+0Q
+0R
+0S
+0T
+0U
+1V
+1W
+1X
+0Y
+1Z
+0[
+0\
+0]
+0^
+0_
+0`
+0a
+0b
+0c
+0d
+1e
+0f
+0g
+0h
+0i
+0j
+0k
+0l
+0m
+0n
+0o
+0p
+0q
+0r
+0s
+0t
+0u
+0v
+0w
+0x
+0y
+0z
+0{
+0|
+0}
+0~
+0!!
+0"!
+0#!
+0$!
+0%!
+0&!
+0'!
+0(!
+0)!
+0*!
+0+!
+0,!
+08
+09
+0:
+0;
+0<
+0=
+0>
+0?
+1D
+1E
+1F
+0G
+1H
+1I
+1J
+0K
+1@
+1A
+1B
+1C
+0#
+0$
+0%
+0&
+0'
+0(
+0)
+0*
+$end
+#50000
+1!
+15
+1T
+1G
+1U
+1Y
+1[
+1\
+0Z
+#100000
+0!
+05
+0T
+0G
+0U
+#140000
+1"
+17
+1c
+1d
+#150000
+1!
+15
+1T
+1G
+1U
+0[
+1]
+1f
+1g
+1x
+1^
+1|
+0\
+1k
+1l
+1}
+1y
+1h
+#200000
+0!
+05
+0T
+0G
+0U
+#240000
+0"
+07
+0c
+0d
+#250000
+1!
+15
+1T
+1G
+1U
+0]
+1_
+0f
+1i
+1m
+1z
+1~
+1!!
+1n
+1`
+0^
+#300000
+0!
+05
+0T
+0G
+0U
+#350000
+1!
+15
+1T
+1G
+1U
+0_
+1a
+1K
+0W
+0`
+0X
+1b
+1j
+1o
+1{
+1"!
+1Q
+1P
+1M
+1L
+1:
+1;
+1>
+1?
+1*
+1)
+1&
+1%
+#400000
+0!
+05
+0T
+0G
+0U
+#450000
+1!
+15
+1T
+1G
+1U
+0Y
+0a
+0K
+1W
+1Z
+1X
+0b
+#500000
+0!
+05
+0T
+0G
+0U
+#550000
+1!
+15
+1T
+1G
+1U
+1Y
+1[
+1\
+0Z
+#600000
+0!
+05
+0T
+0G
+0U
+#650000
+1!
+15
+1T
+1G
+1U
+0[
+1]
+1^
+0\
+#700000
+0!
+05
+0T
+0G
+0U
+#750000
+1!
+15
+1T
+1G
+1U
+0]
+1_
+1`
+0^
+#800000
+0!
+05
+0T
+0G
+0U
+#850000
+1!
+15
+1T
+1G
+1U
+0_
+1a
+1K
+0W
+0`
+0X
+1b
+#900000
+0!
+05
+0T
+0G
+0U
+#950000
+1!
+15
+1T
+1G
+1U
+0Y
+0a
+0K
+1W
+1Z
+1X
+0b
+#1000000

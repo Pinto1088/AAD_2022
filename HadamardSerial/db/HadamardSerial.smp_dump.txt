@@ -1,0 +1,8 @@
+
+State Machine - |EncoderSerial|ControlUnit:ControlUnit|Pstate
+Name Pstate.s_3 Pstate.s_2 Pstate.s_1 Pstate.s_0 Pstate.s_rst 
+Pstate.s_rst 0 0 0 0 0 
+Pstate.s_0 0 0 0 1 1 
+Pstate.s_1 0 0 1 0 1 
+Pstate.s_2 0 1 0 0 1 
+Pstate.s_3 1 0 0 0 1 
