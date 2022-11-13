@@ -1,6 +1,6 @@
 Analysis & Synthesis report for Hadamard
-Tue Nov  8 19:56:39 2022
-Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+Sun Nov 13 14:07:45 2022
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
 ---------------------
@@ -25,9 +25,9 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2018  Intel Corporation. All rights reserved.
+Copyright (C) 2020  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
-and other software and tools, and its AMPP partner logic 
+and other software and tools, and any partner logic 
 functions, and any output files from any of the foregoing 
 (including device programming or simulation files), and any 
 associated documentation or information are expressly subject 
@@ -37,15 +37,16 @@ the Intel FPGA IP License Agreement, or other applicable license
 agreement, including, without limitation, that your use is for
 the sole purpose of programming logic devices manufactured by
 Intel and sold by Intel or its authorized distributors.  Please
-refer to the applicable agreement for further details.
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
 
 
 
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Nov  8 19:56:39 2022       ;
-; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
+; Analysis & Synthesis Status        ; Successful - Sun Nov 13 14:07:45 2022       ;
+; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; Hadamard                                    ;
 ; Top-level Entity Name              ; Decoder                                     ;
 ; Family                             ; Cyclone IV GX                               ;
@@ -155,8 +156,8 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 8           ;
-; Maximum allowed            ; 4           ;
+; Number detected on machine ; 16          ;
+; Maximum allowed            ; 16          ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
 ; Maximum used               ; 1           ;
@@ -166,17 +167,17 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                     ;
-+----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                              ; Library ;
-+----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------+---------+
-; arithmetic.vhd                   ; yes             ; User VHDL File  ; /home/pinto/Documents/Universidade/AAD/Assigments/Hadamard/arithmetic.vhd                 ;         ;
-; simpleLogic.vhd                  ; yes             ; User VHDL File  ; /home/pinto/Documents/Universidade/AAD/Assigments/Hadamard/simpleLogic.vhd                ;         ;
-; Decoder.vhd                      ; yes             ; User VHDL File  ; /home/pinto/Documents/Universidade/AAD/Assigments/Hadamard/Decoder.vhd                    ;         ;
-; Encoder.vhd                      ; yes             ; User VHDL File  ; /home/pinto/Documents/Universidade/AAD/Assigments/Hadamard/Encoder.vhd                    ;         ;
-; popCounter_8bitParallelOpt.vhd   ; yes             ; User VHDL File  ; /home/pinto/Documents/Universidade/AAD/Assigments/Hadamard/popCounter_8bitParallelOpt.vhd ;         ;
-+----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------+---------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                          ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                   ; Library ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------+---------+
+; arithmetic.vhd                   ; yes             ; User VHDL File  ; /home/carlos/Documents/GitHub/AAD_2022/Hadamard/arithmetic.vhd                 ;         ;
+; simpleLogic.vhd                  ; yes             ; User VHDL File  ; /home/carlos/Documents/GitHub/AAD_2022/Hadamard/simpleLogic.vhd                ;         ;
+; Encoder.vhd                      ; yes             ; User VHDL File  ; /home/carlos/Documents/GitHub/AAD_2022/Hadamard/Encoder.vhd                    ;         ;
+; Decoder.vhd                      ; yes             ; User VHDL File  ; /home/carlos/Documents/GitHub/AAD_2022/Hadamard/Decoder.vhd                    ;         ;
+; popCounter_8bitParallelOpt.vhd   ; yes             ; User VHDL File  ; /home/carlos/Documents/GitHub/AAD_2022/Hadamard/popCounter_8bitParallelOpt.vhd ;         ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------+---------+
 
 
 +---------------------------------------------+
@@ -289,57 +290,57 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
-    Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Tue Nov  8 19:56:31 2022
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+    Info: Processing started: Sun Nov 13 14:07:38 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Hadamard -c Hadamard
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
 Info (12021): Found 14 design units, including 7 entities, in source file arithmetic.vhd
-    Info (12022): Found design unit 1: halfAdder_1bit-structure File: /home/pinto/Documents/Universidade/AAD/Assigments/Hadamard/arithmetic.vhd Line: 12
-    Info (12022): Found design unit 2: fullAdder_1bit-structure File: /home/pinto/Documents/Universidade/AAD/Assigments/Hadamard/arithmetic.vhd Line: 37
-    Info (12022): Found design unit 3: fullAdderCLA_1bit-structure File: /home/pinto/Documents/Universidade/AAD/Assigments/Hadamard/arithmetic.vhd Line: 70
-    Info (12022): Found design unit 4: fullAdderWoCI_2bit-structure File: /home/pinto/Documents/Universidade/AAD/Assigments/Hadamard/arithmetic.vhd Line: 95
-    Info (12022): Found design unit 5: fullAdderWoCI_3bit-structure File: /home/pinto/Documents/Universidade/AAD/Assigments/Hadamard/arithmetic.vhd Line: 119
-    Info (12022): Found design unit 6: fullAdderWoCI_4bit-structure File: /home/pinto/Documents/Universidade/AAD/Assigments/Hadamard/arithmetic.vhd Line: 148
-    Info (12022): Found design unit 7: fullAdderWoCI_5bit-structure File: /home/pinto/Documents/Universidade/AAD/Assigments/Hadamard/arithmetic.vhd Line: 178
-    Info (12023): Found entity 1: halfAdder_1bit File: /home/pinto/Documents/Universidade/AAD/Assigments/Hadamard/arithmetic.vhd Line: 7
-    Info (12023): Found entity 2: fullAdder_1bit File: /home/pinto/Documents/Universidade/AAD/Assigments/Hadamard/arithmetic.vhd Line: 32
-    Info (12023): Found entity 3: fullAdderCLA_1bit File: /home/pinto/Documents/Universidade/AAD/Assigments/Hadamard/arithmetic.vhd Line: 65
-    Info (12023): Found entity 4: fullAdderWoCI_2bit File: /home/pinto/Documents/Universidade/AAD/Assigments/Hadamard/arithmetic.vhd Line: 89
-    Info (12023): Found entity 5: fullAdderWoCI_3bit File: /home/pinto/Documents/Universidade/AAD/Assigments/Hadamard/arithmetic.vhd Line: 113
-    Info (12023): Found entity 6: fullAdderWoCI_4bit File: /home/pinto/Documents/Universidade/AAD/Assigments/Hadamard/arithmetic.vhd Line: 142
-    Info (12023): Found entity 7: fullAdderWoCI_5bit File: /home/pinto/Documents/Universidade/AAD/Assigments/Hadamard/arithmetic.vhd Line: 172
+    Info (12022): Found design unit 1: halfAdder_1bit-structure File: /home/carlos/Documents/GitHub/AAD_2022/Hadamard/arithmetic.vhd Line: 12
+    Info (12022): Found design unit 2: fullAdder_1bit-structure File: /home/carlos/Documents/GitHub/AAD_2022/Hadamard/arithmetic.vhd Line: 37
+    Info (12022): Found design unit 3: fullAdderCLA_1bit-structure File: /home/carlos/Documents/GitHub/AAD_2022/Hadamard/arithmetic.vhd Line: 70
+    Info (12022): Found design unit 4: fullAdderWoCI_2bit-structure File: /home/carlos/Documents/GitHub/AAD_2022/Hadamard/arithmetic.vhd Line: 95
+    Info (12022): Found design unit 5: fullAdderWoCI_3bit-structure File: /home/carlos/Documents/GitHub/AAD_2022/Hadamard/arithmetic.vhd Line: 119
+    Info (12022): Found design unit 6: fullAdderWoCI_4bit-structure File: /home/carlos/Documents/GitHub/AAD_2022/Hadamard/arithmetic.vhd Line: 148
+    Info (12022): Found design unit 7: fullAdderWoCI_5bit-structure File: /home/carlos/Documents/GitHub/AAD_2022/Hadamard/arithmetic.vhd Line: 178
+    Info (12023): Found entity 1: halfAdder_1bit File: /home/carlos/Documents/GitHub/AAD_2022/Hadamard/arithmetic.vhd Line: 7
+    Info (12023): Found entity 2: fullAdder_1bit File: /home/carlos/Documents/GitHub/AAD_2022/Hadamard/arithmetic.vhd Line: 32
+    Info (12023): Found entity 3: fullAdderCLA_1bit File: /home/carlos/Documents/GitHub/AAD_2022/Hadamard/arithmetic.vhd Line: 65
+    Info (12023): Found entity 4: fullAdderWoCI_2bit File: /home/carlos/Documents/GitHub/AAD_2022/Hadamard/arithmetic.vhd Line: 89
+    Info (12023): Found entity 5: fullAdderWoCI_3bit File: /home/carlos/Documents/GitHub/AAD_2022/Hadamard/arithmetic.vhd Line: 113
+    Info (12023): Found entity 6: fullAdderWoCI_4bit File: /home/carlos/Documents/GitHub/AAD_2022/Hadamard/arithmetic.vhd Line: 142
+    Info (12023): Found entity 7: fullAdderWoCI_5bit File: /home/carlos/Documents/GitHub/AAD_2022/Hadamard/arithmetic.vhd Line: 172
 Info (12021): Found 6 design units, including 3 entities, in source file simpleLogic.vhd
-    Info (12022): Found design unit 1: gateAnd2-logicFunction File: /home/pinto/Documents/Universidade/AAD/Assigments/Hadamard/simpleLogic.vhd Line: 9
-    Info (12022): Found design unit 2: gateOr2-logicFunction File: /home/pinto/Documents/Universidade/AAD/Assigments/Hadamard/simpleLogic.vhd Line: 22
-    Info (12022): Found design unit 3: gateXOr2-logicFunction File: /home/pinto/Documents/Universidade/AAD/Assigments/Hadamard/simpleLogic.vhd Line: 35
-    Info (12023): Found entity 1: gateAnd2 File: /home/pinto/Documents/Universidade/AAD/Assigments/Hadamard/simpleLogic.vhd Line: 4
-    Info (12023): Found entity 2: gateOr2 File: /home/pinto/Documents/Universidade/AAD/Assigments/Hadamard/simpleLogic.vhd Line: 17
-    Info (12023): Found entity 3: gateXOr2 File: /home/pinto/Documents/Universidade/AAD/Assigments/Hadamard/simpleLogic.vhd Line: 30
-Info (12021): Found 2 design units, including 1 entities, in source file Decoder.vhd
-    Info (12022): Found design unit 1: Decoder-Struct File: /home/pinto/Documents/Universidade/AAD/Assigments/Hadamard/Decoder.vhd Line: 13
-    Info (12023): Found entity 1: Decoder File: /home/pinto/Documents/Universidade/AAD/Assigments/Hadamard/Decoder.vhd Line: 5
+    Info (12022): Found design unit 1: gateAnd2-logicFunction File: /home/carlos/Documents/GitHub/AAD_2022/Hadamard/simpleLogic.vhd Line: 9
+    Info (12022): Found design unit 2: gateOr2-logicFunction File: /home/carlos/Documents/GitHub/AAD_2022/Hadamard/simpleLogic.vhd Line: 22
+    Info (12022): Found design unit 3: gateXOr2-logicFunction File: /home/carlos/Documents/GitHub/AAD_2022/Hadamard/simpleLogic.vhd Line: 35
+    Info (12023): Found entity 1: gateAnd2 File: /home/carlos/Documents/GitHub/AAD_2022/Hadamard/simpleLogic.vhd Line: 4
+    Info (12023): Found entity 2: gateOr2 File: /home/carlos/Documents/GitHub/AAD_2022/Hadamard/simpleLogic.vhd Line: 17
+    Info (12023): Found entity 3: gateXOr2 File: /home/carlos/Documents/GitHub/AAD_2022/Hadamard/simpleLogic.vhd Line: 30
 Info (12021): Found 2 design units, including 1 entities, in source file Encoder.vhd
-    Info (12022): Found design unit 1: Encoder-Struct File: /home/pinto/Documents/Universidade/AAD/Assigments/Hadamard/Encoder.vhd Line: 12
-    Info (12023): Found entity 1: Encoder File: /home/pinto/Documents/Universidade/AAD/Assigments/Hadamard/Encoder.vhd Line: 5
+    Info (12022): Found design unit 1: Encoder-Struct File: /home/carlos/Documents/GitHub/AAD_2022/Hadamard/Encoder.vhd Line: 12
+    Info (12023): Found entity 1: Encoder File: /home/carlos/Documents/GitHub/AAD_2022/Hadamard/Encoder.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file Decoder.vhd
+    Info (12022): Found design unit 1: Decoder-Struct File: /home/carlos/Documents/GitHub/AAD_2022/Hadamard/Decoder.vhd Line: 13
+    Info (12023): Found entity 1: Decoder File: /home/carlos/Documents/GitHub/AAD_2022/Hadamard/Decoder.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file popCounter_8bitParallelOpt.vhd
-    Info (12022): Found design unit 1: popCounter_8bitParallelOpt-structure File: /home/pinto/Documents/Universidade/AAD/Assigments/Hadamard/popCounter_8bitParallelOpt.vhd Line: 12
-    Info (12023): Found entity 1: popCounter_8bitParallelOpt File: /home/pinto/Documents/Universidade/AAD/Assigments/Hadamard/popCounter_8bitParallelOpt.vhd Line: 7
+    Info (12022): Found design unit 1: popCounter_8bitParallelOpt-structure File: /home/carlos/Documents/GitHub/AAD_2022/Hadamard/popCounter_8bitParallelOpt.vhd Line: 12
+    Info (12023): Found entity 1: popCounter_8bitParallelOpt File: /home/carlos/Documents/GitHub/AAD_2022/Hadamard/popCounter_8bitParallelOpt.vhd Line: 7
 Info (12127): Elaborating entity "Decoder" for the top level hierarchy
-Info (12129): Elaborating entity "Encoder" using architecture "A:struct" for hierarchy "Encoder:partial_decoder" File: /home/pinto/Documents/Universidade/AAD/Assigments/Hadamard/Decoder.vhd Line: 75
-Warning (10492): VHDL Process Statement warning at Encoder.vhd(32): signal "s2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/pinto/Documents/Universidade/AAD/Assigments/Hadamard/Encoder.vhd Line: 32
-Warning (10492): VHDL Process Statement warning at Encoder.vhd(34): signal "s1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/pinto/Documents/Universidade/AAD/Assigments/Hadamard/Encoder.vhd Line: 34
-Warning (10492): VHDL Process Statement warning at Encoder.vhd(35): signal "s4" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/pinto/Documents/Universidade/AAD/Assigments/Hadamard/Encoder.vhd Line: 35
-Warning (10492): VHDL Process Statement warning at Encoder.vhd(36): signal "s6" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/pinto/Documents/Universidade/AAD/Assigments/Hadamard/Encoder.vhd Line: 36
-Info (12129): Elaborating entity "popCounter_8bitParallelOpt" using architecture "A:structure" for hierarchy "popCounter_8bitParallelOpt:popCounter8" File: /home/pinto/Documents/Universidade/AAD/Assigments/Hadamard/Decoder.vhd Line: 89
-Info (12128): Elaborating entity "halfAdder_1bit" for hierarchy "popCounter_8bitParallelOpt:popCounter8|halfAdder_1bit:hA00" File: /home/pinto/Documents/Universidade/AAD/Assigments/Hadamard/popCounter_8bitParallelOpt.vhd Line: 43
-Info (12128): Elaborating entity "gateXOr2" for hierarchy "popCounter_8bitParallelOpt:popCounter8|halfAdder_1bit:hA00|gateXOr2:xor20" File: /home/pinto/Documents/Universidade/AAD/Assigments/Hadamard/arithmetic.vhd Line: 22
-Info (12128): Elaborating entity "gateAnd2" for hierarchy "popCounter_8bitParallelOpt:popCounter8|halfAdder_1bit:hA00|gateAnd2:and20" File: /home/pinto/Documents/Universidade/AAD/Assigments/Hadamard/arithmetic.vhd Line: 23
-Info (12128): Elaborating entity "fullAdderWoCI_2bit" for hierarchy "popCounter_8bitParallelOpt:popCounter8|fullAdderWoCI_2bit:fA10" File: /home/pinto/Documents/Universidade/AAD/Assigments/Hadamard/popCounter_8bitParallelOpt.vhd Line: 49
-Info (12128): Elaborating entity "fullAdderCLA_1bit" for hierarchy "popCounter_8bitParallelOpt:popCounter8|fullAdderWoCI_2bit:fA10|fullAdderCLA_1bit:fA0" File: /home/pinto/Documents/Universidade/AAD/Assigments/Hadamard/arithmetic.vhd Line: 107
-Info (12128): Elaborating entity "fullAdderWoCI_3bit" for hierarchy "popCounter_8bitParallelOpt:popCounter8|fullAdderWoCI_3bit:fA20" File: /home/pinto/Documents/Universidade/AAD/Assigments/Hadamard/popCounter_8bitParallelOpt.vhd Line: 53
-Info (12128): Elaborating entity "fullAdder_1bit" for hierarchy "popCounter_8bitParallelOpt:popCounter8|fullAdderWoCI_3bit:fA20|fullAdder_1bit:fA10" File: /home/pinto/Documents/Universidade/AAD/Assigments/Hadamard/arithmetic.vhd Line: 135
-Info (12128): Elaborating entity "gateOr2" for hierarchy "popCounter_8bitParallelOpt:popCounter8|fullAdderWoCI_3bit:fA20|fullAdder_1bit:fA10|gateOr2:or20" File: /home/pinto/Documents/Universidade/AAD/Assigments/Hadamard/arithmetic.vhd Line: 56
+Info (12129): Elaborating entity "Encoder" using architecture "A:struct" for hierarchy "Encoder:partial_decoder" File: /home/carlos/Documents/GitHub/AAD_2022/Hadamard/Decoder.vhd Line: 75
+Warning (10492): VHDL Process Statement warning at Encoder.vhd(32): signal "s2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/carlos/Documents/GitHub/AAD_2022/Hadamard/Encoder.vhd Line: 32
+Warning (10492): VHDL Process Statement warning at Encoder.vhd(34): signal "s1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/carlos/Documents/GitHub/AAD_2022/Hadamard/Encoder.vhd Line: 34
+Warning (10492): VHDL Process Statement warning at Encoder.vhd(35): signal "s4" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/carlos/Documents/GitHub/AAD_2022/Hadamard/Encoder.vhd Line: 35
+Warning (10492): VHDL Process Statement warning at Encoder.vhd(36): signal "s6" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/carlos/Documents/GitHub/AAD_2022/Hadamard/Encoder.vhd Line: 36
+Info (12129): Elaborating entity "popCounter_8bitParallelOpt" using architecture "A:structure" for hierarchy "popCounter_8bitParallelOpt:popCounter8" File: /home/carlos/Documents/GitHub/AAD_2022/Hadamard/Decoder.vhd Line: 89
+Info (12128): Elaborating entity "halfAdder_1bit" for hierarchy "popCounter_8bitParallelOpt:popCounter8|halfAdder_1bit:hA00" File: /home/carlos/Documents/GitHub/AAD_2022/Hadamard/popCounter_8bitParallelOpt.vhd Line: 43
+Info (12128): Elaborating entity "gateXOr2" for hierarchy "popCounter_8bitParallelOpt:popCounter8|halfAdder_1bit:hA00|gateXOr2:xor20" File: /home/carlos/Documents/GitHub/AAD_2022/Hadamard/arithmetic.vhd Line: 22
+Info (12128): Elaborating entity "gateAnd2" for hierarchy "popCounter_8bitParallelOpt:popCounter8|halfAdder_1bit:hA00|gateAnd2:and20" File: /home/carlos/Documents/GitHub/AAD_2022/Hadamard/arithmetic.vhd Line: 23
+Info (12128): Elaborating entity "fullAdderWoCI_2bit" for hierarchy "popCounter_8bitParallelOpt:popCounter8|fullAdderWoCI_2bit:fA10" File: /home/carlos/Documents/GitHub/AAD_2022/Hadamard/popCounter_8bitParallelOpt.vhd Line: 49
+Info (12128): Elaborating entity "fullAdderCLA_1bit" for hierarchy "popCounter_8bitParallelOpt:popCounter8|fullAdderWoCI_2bit:fA10|fullAdderCLA_1bit:fA0" File: /home/carlos/Documents/GitHub/AAD_2022/Hadamard/arithmetic.vhd Line: 107
+Info (12128): Elaborating entity "fullAdderWoCI_3bit" for hierarchy "popCounter_8bitParallelOpt:popCounter8|fullAdderWoCI_3bit:fA20" File: /home/carlos/Documents/GitHub/AAD_2022/Hadamard/popCounter_8bitParallelOpt.vhd Line: 53
+Info (12128): Elaborating entity "fullAdder_1bit" for hierarchy "popCounter_8bitParallelOpt:popCounter8|fullAdderWoCI_3bit:fA20|fullAdder_1bit:fA10" File: /home/carlos/Documents/GitHub/AAD_2022/Hadamard/arithmetic.vhd Line: 135
+Info (12128): Elaborating entity "gateOr2" for hierarchy "popCounter_8bitParallelOpt:popCounter8|fullAdderWoCI_3bit:fA20|fullAdder_1bit:fA10|gateOr2:or20" File: /home/carlos/Documents/GitHub/AAD_2022/Hadamard/arithmetic.vhd Line: 56
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
@@ -348,9 +349,9 @@ Info (21057): Implemented 49 device resources after synthesis - the final resour
     Info (21059): Implemented 5 output pins
     Info (21061): Implemented 36 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 1026 megabytes
-    Info: Processing ended: Tue Nov  8 19:56:39 2022
-    Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:20
+    Info: Peak virtual memory: 498 megabytes
+    Info: Processing ended: Sun Nov 13 14:07:45 2022
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:22
 
 

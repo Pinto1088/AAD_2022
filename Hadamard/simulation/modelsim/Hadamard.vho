@@ -1,6 +1,6 @@
--- Copyright (C) 2018  Intel Corporation. All rights reserved.
+-- Copyright (C) 2020  Intel Corporation. All rights reserved.
 -- Your use of Intel Corporation's design tools, logic functions 
--- and other software and tools, and its AMPP partner logic 
+-- and other software and tools, and any partner logic 
 -- functions, and any output files from any of the foregoing 
 -- (including device programming or simulation files), and any 
 -- associated documentation or information are expressly subject 
@@ -10,13 +10,14 @@
 -- agreement, including, without limitation, that your use is for
 -- the sole purpose of programming logic devices manufactured by
 -- Intel and sold by Intel or its authorized distributors.  Please
--- refer to the applicable agreement for further details.
+-- refer to the applicable agreement for further details, at
+-- https://fpgasoftware.intel.com/eula.
 
 -- VENDOR "Altera"
 -- PROGRAM "Quartus Prime"
--- VERSION "Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition"
+-- VERSION "Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition"
 
--- DATE "11/08/2022 19:56:46"
+-- DATE "11/13/2022 14:07:53"
 
 -- 
 -- Device: Altera EP4CGX15BF14C6 Package FBGA169
@@ -77,8 +78,8 @@ USE IEEE.STD_LOGIC_1164.ALL;
 ENTITY 	Decoder IS
     PORT (
 	yIn : IN std_logic_vector(7 DOWNTO 0);
-	msOut : OUT std_logic_vector(3 DOWNTO 0);
-	valid : OUT std_logic
+	msOut : BUFFER std_logic_vector(3 DOWNTO 0);
+	valid : BUFFER std_logic
 	);
 END Decoder;
 
