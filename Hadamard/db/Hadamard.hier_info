@@ -31,11 +31,11 @@ yIn[7] => c13.IN1
 yIn[7] => c23.IN1
 yIn[7] => c33.IN1
 yIn[7] => popIn[7].IN1
-msOut[0] <= msOut.DB_MAX_OUTPUT_PORT_TYPE
-msOut[1] <= m_slash[2].DB_MAX_OUTPUT_PORT_TYPE
-msOut[2] <= m_slash[1].DB_MAX_OUTPUT_PORT_TYPE
-msOut[3] <= m_slash[0].DB_MAX_OUTPUT_PORT_TYPE
-valid <= s_valid.DB_MAX_OUTPUT_PORT_TYPE
+msOut[0] << msOut.DB_MAX_OUTPUT_PORT_TYPE
+msOut[1] << m_slash[2].DB_MAX_OUTPUT_PORT_TYPE
+msOut[2] << m_slash[1].DB_MAX_OUTPUT_PORT_TYPE
+msOut[3] << m_slash[0].DB_MAX_OUTPUT_PORT_TYPE
+valid << s_valid.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Decoder|Encoder:partial_decoder

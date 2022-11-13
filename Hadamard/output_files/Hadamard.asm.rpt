@@ -1,6 +1,6 @@
 Assembler report for Hadamard
-Tue Nov  8 19:56:43 2022
-Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+Sun Nov 13 14:07:50 2022
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
 ---------------------
@@ -18,9 +18,9 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2018  Intel Corporation. All rights reserved.
+Copyright (C) 2020  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
-and other software and tools, and its AMPP partner logic 
+and other software and tools, and any partner logic 
 functions, and any output files from any of the foregoing 
 (including device programming or simulation files), and any 
 associated documentation or information are expressly subject 
@@ -30,14 +30,15 @@ the Intel FPGA IP License Agreement, or other applicable license
 agreement, including, without limitation, that your use is for
 the sole purpose of programming logic devices manufactured by
 Intel and sold by Intel or its authorized distributors.  Please
-refer to the applicable agreement for further details.
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
 
 
 
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Tue Nov  8 19:56:43 2022 ;
+; Assembler Status      ; Successful - Sun Nov 13 14:07:50 2022 ;
 ; Revision Name         ; Hadamard                              ;
 ; Top-level Entity Name ; Decoder                               ;
 ; Family                ; Cyclone IV GX                         ;
@@ -52,13 +53,13 @@ refer to the applicable agreement for further details.
 +--------+---------+---------------+
 
 
-+--------------------------------------------------------------------------------------+
-; Assembler Generated Files                                                            ;
-+--------------------------------------------------------------------------------------+
-; File Name                                                                            ;
-+--------------------------------------------------------------------------------------+
-; /home/pinto/Documents/Universidade/AAD/Assigments/Hadamard/output_files/Hadamard.sof ;
-+--------------------------------------------------------------------------------------+
++---------------------------------------------------------------------------+
+; Assembler Generated Files                                                 ;
++---------------------------------------------------------------------------+
+; File Name                                                                 ;
++---------------------------------------------------------------------------+
+; /home/carlos/Documents/GitHub/AAD_2022/Hadamard/output_files/Hadamard.sof ;
++---------------------------------------------------------------------------+
 
 
 +----------------------------------------+
@@ -76,16 +77,16 @@ refer to the applicable agreement for further details.
 +--------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
-    Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Tue Nov  8 19:56:43 2022
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+    Info: Processing started: Sun Nov 13 14:07:49 2022
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off Hadamard -c Hadamard
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus Prime Assembler was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 852 megabytes
-    Info: Processing ended: Tue Nov  8 19:56:43 2022
-    Info: Elapsed time: 00:00:00
-    Info: Total CPU time (on all processors): 00:00:00
+    Info: Peak virtual memory: 413 megabytes
+    Info: Processing ended: Sun Nov 13 14:07:50 2022
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
 
 
