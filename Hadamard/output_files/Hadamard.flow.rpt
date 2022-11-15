@@ -1,5 +1,5 @@
 Flow report for Hadamard
-Sun Nov 13 14:29:03 2022
+Sun Nov 13 21:37:03 2022
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -41,26 +41,24 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------------+
 ; Flow Summary                                                                              ;
 +------------------------------------+------------------------------------------------------+
-; Flow Status                        ; EDA Netlist Writer Failed - Sun Nov 13 14:29:03 2022 ;
+; Flow Status                        ; EDA Netlist Writer Failed - Sun Nov 13 21:37:03 2022 ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition          ;
 ; Revision Name                      ; Hadamard                                             ;
 ; Top-level Entity Name              ; Decoder                                              ;
 ; Family                             ; Cyclone IV GX                                        ;
-; Total logic elements               ; 36 / 14,400 ( < 1 % )                                ;
-;     Total combinational functions  ; 36 / 14,400 ( < 1 % )                                ;
-;     Dedicated logic registers      ; 0 / 14,400 ( 0 % )                                   ;
-; Total registers                    ; 0                                                    ;
-; Total pins                         ; 13 / 81 ( 16 % )                                     ;
-; Total virtual pins                 ; 0                                                    ;
-; Total memory bits                  ; 0 / 552,960 ( 0 % )                                  ;
-; Embedded Multiplier 9-bit elements ; 0                                                    ;
-; Total GXB Receiver Channel PCS     ; 0 / 2 ( 0 % )                                        ;
-; Total GXB Receiver Channel PMA     ; 0 / 2 ( 0 % )                                        ;
-; Total GXB Transmitter Channel PCS  ; 0 / 2 ( 0 % )                                        ;
-; Total GXB Transmitter Channel PMA  ; 0 / 2 ( 0 % )                                        ;
-; Total PLLs                         ; 0 / 3 ( 0 % )                                        ;
-; Device                             ; EP4CGX15BF14C6                                       ;
-; Timing Models                      ; Final                                                ;
+; Total logic elements               ; N/A until Partition Merge                            ;
+;     Total combinational functions  ; N/A until Partition Merge                            ;
+;     Dedicated logic registers      ; N/A until Partition Merge                            ;
+; Total registers                    ; N/A until Partition Merge                            ;
+; Total pins                         ; N/A until Partition Merge                            ;
+; Total virtual pins                 ; N/A until Partition Merge                            ;
+; Total memory bits                  ; N/A until Partition Merge                            ;
+; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                            ;
+; Total GXB Receiver Channel PCS     ; N/A until Partition Merge                            ;
+; Total GXB Receiver Channel PMA     ; N/A until Partition Merge                            ;
+; Total GXB Transmitter Channel PCS  ; N/A until Partition Merge                            ;
+; Total GXB Transmitter Channel PMA  ; N/A until Partition Merge                            ;
+; Total PLLs                         ; N/A until Partition Merge                            ;
 +------------------------------------+------------------------------------------------------+
 
 
@@ -69,7 +67,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/13/2022 14:07:38 ;
+; Start date & time ; 11/13/2022 21:35:04 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Hadamard            ;
 +-------------------+---------------------+
@@ -80,7 +78,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 242895776777251.166834845810349        ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 242895776777251.166837530402748        ; --            ; --          ; --             ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; On                                     ; --            ; --          ; eda_simulation ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                                   ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (VHDL)                 ; <None>        ; --          ; --             ;
@@ -93,50 +91,44 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------+
-; Flow Elapsed Time                                                                                                        ;
-+----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
-+----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:07     ; 1.0                     ; 498 MB              ; 00:00:22                           ;
-; Fitter               ; 00:00:03     ; 1.0                     ; 1996 MB             ; 00:00:04                           ;
-; Assembler            ; 00:00:01     ; 1.0                     ; 413 MB              ; 00:00:01                           ;
-; Timing Analyzer      ; 00:00:02     ; 1.1                     ; 593 MB              ; 00:00:01                           ;
-; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 662 MB              ; 00:00:00                           ;
-; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 662 MB              ; 00:00:00                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 662 MB              ; 00:00:00                           ;
-; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 662 MB              ; 00:00:00                           ;
-; Total                ; 00:00:14     ; --                      ; --                  ; 00:00:28                           ;
-+----------------------+--------------+-------------------------+---------------------+------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                          ;
++------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name            ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Elaboration ; 00:00:07     ; 1.0                     ; 795 MB              ; 00:00:24                           ;
+; EDA Netlist Writer     ; 00:00:01     ; 1.0                     ; 659 MB              ; 00:00:00                           ;
+; EDA Netlist Writer     ; 00:00:01     ; 1.0                     ; 662 MB              ; 00:00:00                           ;
+; EDA Netlist Writer     ; 00:00:01     ; 1.0                     ; 662 MB              ; 00:00:00                           ;
+; EDA Netlist Writer     ; 00:00:01     ; 1.0                     ; 662 MB              ; 00:00:00                           ;
+; EDA Netlist Writer     ; 00:00:00     ; 1.0                     ; 662 MB              ; 00:00:00                           ;
+; Total                  ; 00:00:11     ; --                      ; --                  ; 00:00:24                           ;
++------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------+
-; Flow OS Summary                                                                            ;
-+----------------------+------------------+----------------+----------------+----------------+
-; Module Name          ; Machine Hostname ; OS Name        ; OS Version     ; Processor type ;
-+----------------------+------------------+----------------+----------------+----------------+
-; Analysis & Synthesis ; new-host-2       ; Kali GNU/Linux ; Kali GNU/Linux ; x86_64         ;
-; Fitter               ; new-host-2       ; Kali GNU/Linux ; Kali GNU/Linux ; x86_64         ;
-; Assembler            ; new-host-2       ; Kali GNU/Linux ; Kali GNU/Linux ; x86_64         ;
-; Timing Analyzer      ; new-host-2       ; Kali GNU/Linux ; Kali GNU/Linux ; x86_64         ;
-; EDA Netlist Writer   ; new-host-2       ; Kali GNU/Linux ; Kali GNU/Linux ; x86_64         ;
-; EDA Netlist Writer   ; new-host-2       ; Kali GNU/Linux ; Kali GNU/Linux ; x86_64         ;
-; EDA Netlist Writer   ; new-host-2       ; Kali GNU/Linux ; Kali GNU/Linux ; x86_64         ;
-; EDA Netlist Writer   ; new-host-2       ; Kali GNU/Linux ; Kali GNU/Linux ; x86_64         ;
-+----------------------+------------------+----------------+----------------+----------------+
++----------------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                              ;
++------------------------+------------------+----------------+----------------+----------------+
+; Module Name            ; Machine Hostname ; OS Name        ; OS Version     ; Processor type ;
++------------------------+------------------+----------------+----------------+----------------+
+; Analysis & Elaboration ; new-host-2       ; Kali GNU/Linux ; Kali GNU/Linux ; x86_64         ;
+; EDA Netlist Writer     ; new-host-2       ; Kali GNU/Linux ; Kali GNU/Linux ; x86_64         ;
+; EDA Netlist Writer     ; new-host-2       ; Kali GNU/Linux ; Kali GNU/Linux ; x86_64         ;
+; EDA Netlist Writer     ; new-host-2       ; Kali GNU/Linux ; Kali GNU/Linux ; x86_64         ;
+; EDA Netlist Writer     ; new-host-2       ; Kali GNU/Linux ; Kali GNU/Linux ; x86_64         ;
+; EDA Netlist Writer     ; new-host-2       ; Kali GNU/Linux ; Kali GNU/Linux ; x86_64         ;
++------------------------+------------------+----------------+----------------+----------------+
 
 
 ------------
 ; Flow Log ;
 ------------
-quartus_map --read_settings_files=on --write_settings_files=off Hadamard -c Hadamard
-quartus_fit --read_settings_files=off --write_settings_files=off Hadamard -c Hadamard
-quartus_asm --read_settings_files=off --write_settings_files=off Hadamard -c Hadamard
-quartus_sta Hadamard -c Hadamard
-quartus_eda --read_settings_files=off --write_settings_files=off Hadamard -c Hadamard
-quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off Hadamard -c Hadamard --vector_source=/home/pinto/Documents/Universidade/AAD/Assigments/Hadamard/Waveform1.vwf --testbench_file=/home/pinto/Documents/Universidade/AAD/Assigments/Hadamard/simulation/qsim/Waveform1.vwf.vht
-quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off Hadamard -c Hadamard --vector_source=/home/pinto/Documents/Universidade/AAD/Assigments/Hadamard/Waveform1.vwf --testbench_file=/home/pinto/Documents/Universidade/AAD/Assigments/Hadamard/simulation/qsim/Waveform1.vwf.vht
-quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off Hadamard -c Hadamard --vector_source=/home/carlos/Documents/GitHub/AAD_2022/Hadamard/simulation/qsim/Hadamard_20221108200106.sim.vwf --testbench_file=/home/carlos/Documents/GitHub/AAD_2022/Hadamard/simulation/qsim/simulation/qsim/Hadamard_20221108200106.sim.vwf.vht
+quartus_map --read_settings_files=on --write_settings_files=off Hadamard -c Hadamard --analysis_and_elaboration
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off Hadamard -c Hadamard --vector_source=/media/carlos/Windows-SSD/Users/carlo/Documents/GitHub/AAD_2022/Hadamard/Waveform1.vwf --testbench_file=/media/carlos/Windows-SSD/Users/carlo/Documents/GitHub/AAD_2022/Hadamard/simulation/qsim/Waveform1.vwf.vht
+quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=/media/carlos/Windows-SSD/Users/carlo/Documents/GitHub/AAD_2022/Hadamard/simulation/qsim/ Hadamard -c Hadamard
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off Hadamard -c Hadamard --vector_source=/media/carlos/Windows-SSD/Users/carlo/Documents/GitHub/AAD_2022/Hadamard/Waveform1.vwf --testbench_file=/media/carlos/Windows-SSD/Users/carlo/Documents/GitHub/AAD_2022/Hadamard/simulation/qsim/Waveform1.vwf.vht
+quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=/media/carlos/Windows-SSD/Users/carlo/Documents/GitHub/AAD_2022/Hadamard/simulation/qsim/ Hadamard -c Hadamard
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off Hadamard -c Hadamard --vector_source=/media/carlos/Windows-SSD/Users/carlo/Documents/GitHub/AAD_2022/Hadamard/simulation/qsim/Hadamard_20221113213656.sim.vwf --testbench_file=/media/carlos/Windows-SSD/Users/carlo/Documents/GitHub/AAD_2022/Hadamard/simulation/qsim/simulation/qsim/Hadamard_20221113213656.sim.vwf.vht
 
 
 

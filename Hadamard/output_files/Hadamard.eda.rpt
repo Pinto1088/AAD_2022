@@ -1,5 +1,5 @@
 EDA Netlist Writer report for Hadamard
-Sun Nov 13 14:29:03 2022
+Sun Nov 13 21:37:03 2022
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -35,7 +35,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                    ;
 +---------------------------+-----------------------------------+
-; EDA Netlist Writer Status ; Failed - Sun Nov 13 14:29:03 2022 ;
+; EDA Netlist Writer Status ; Failed - Sun Nov 13 21:37:03 2022 ;
 ; Revision Name             ; Hadamard                          ;
 ; Top-level Entity Name     ; Decoder                           ;
 ; Family                    ; Cyclone IV GX                     ;
@@ -62,13 +62,14 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details, at
     Info: https://fpgasoftware.intel.com/eula.
-    Info: Processing started: Sun Nov 13 14:29:03 2022
-Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off Hadamard -c Hadamard --vector_source=/home/carlos/Documents/GitHub/AAD_2022/Hadamard/simulation/qsim/Hadamard_20221108200106.sim.vwf --testbench_file=/home/carlos/Documents/GitHub/AAD_2022/Hadamard/simulation/qsim/simulation/qsim/Hadamard_20221108200106.sim.vwf.vht
+    Info: Processing started: Sun Nov 13 21:37:03 2022
+Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off Hadamard -c Hadamard --vector_source=/media/carlos/Windows-SSD/Users/carlo/Documents/GitHub/AAD_2022/Hadamard/simulation/qsim/Hadamard_20221113213656.sim.vwf --testbench_file=/media/carlos/Windows-SSD/Users/carlo/Documents/GitHub/AAD_2022/Hadamard/simulation/qsim/simulation/qsim/Hadamard_20221113213656.sim.vwf.vht
+Info (119004): Automatically selected device EP4CGX15BF14C6 for design Hadamard
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Error (199013): HDL output file name "/home/carlos/Documents/GitHub/AAD_2022/Hadamard/simulation/qsim/simulation/qsim/Hadamard_20221108200106.sim.vwf.vht" used with --testbench_file option contains a non-existent directory path
+Error (199013): HDL output file name "/media/carlos/Windows-SSD/Users/carlo/Documents/GitHub/AAD_2022/Hadamard/simulation/qsim/simulation/qsim/Hadamard_20221113213656.sim.vwf.vht" used with --testbench_file option contains a non-existent directory path
 Error: Quartus Prime EDA Netlist Writer was unsuccessful. 1 error, 1 warning
     Error: Peak virtual memory: 662 megabytes
-    Error: Processing ended: Sun Nov 13 14:29:03 2022
+    Error: Processing ended: Sun Nov 13 21:37:03 2022
     Error: Elapsed time: 00:00:00
     Error: Total CPU time (on all processors): 00:00:00
 

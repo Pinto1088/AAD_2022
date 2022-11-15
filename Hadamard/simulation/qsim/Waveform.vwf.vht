@@ -1,6 +1,6 @@
--- Copyright (C) 2018  Intel Corporation. All rights reserved.
+-- Copyright (C) 2020  Intel Corporation. All rights reserved.
 -- Your use of Intel Corporation's design tools, logic functions 
--- and other software and tools, and its AMPP partner logic 
+-- and other software and tools, and any partner logic 
 -- functions, and any output files from any of the foregoing 
 -- (including device programming or simulation files), and any 
 -- associated documentation or information are expressly subject 
@@ -10,7 +10,8 @@
 -- agreement, including, without limitation, that your use is for
 -- the sole purpose of programming logic devices manufactured by
 -- Intel and sold by Intel or its authorized distributors.  Please
--- refer to the applicable agreement for further details.
+-- refer to the applicable agreement for further details, at
+-- https://fpgasoftware.intel.com/eula.
 
 -- *****************************************************************************
 -- This file contains a Vhdl test bench with test vectors .The test vectors     
@@ -18,7 +19,7 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "11/08/2022 20:01:05"
+-- Generated on "11/13/2022 21:33:30"
                                                              
 -- Vhdl Test Bench(with test vectors) for design  :          Decoder
 -- 
@@ -38,8 +39,8 @@ SIGNAL valid : STD_LOGIC;
 SIGNAL yIn : STD_LOGIC_VECTOR(7 DOWNTO 0);
 COMPONENT Decoder
 	PORT (
-	msOut : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
-	valid : OUT STD_LOGIC;
+	msOut : BUFFER STD_LOGIC_VECTOR(3 DOWNTO 0);
+	valid : BUFFER STD_LOGIC;
 	yIn : IN STD_LOGIC_VECTOR(7 DOWNTO 0)
 	);
 END COMPONENT;

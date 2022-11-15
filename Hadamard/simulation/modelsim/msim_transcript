@@ -9,23 +9,20 @@
 # Copying /home/carlos/intelFPGA_lite/20.1/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
-# vcom -93 -work work {/home/carlos/Documents/GitHub/AAD_2022/Hadamard/arithmetic.vhd}
+# vcom -93 -work work {/media/carlos/Windows-SSD/Users/carlo/Documents/GitHub/AAD_2022/Hadamard/arithmetic.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:25:01 on Nov 13,2022
-# vcom -reportprogress 300 -93 -work work /home/carlos/Documents/GitHub/AAD_2022/Hadamard/arithmetic.vhd 
+# Start time: 21:35:14 on Nov 13,2022
+# vcom -reportprogress 300 -93 -work work /media/carlos/Windows-SSD/Users/carlo/Documents/GitHub/AAD_2022/Hadamard/arithmetic.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
-# ** Error: /home/carlos/Documents/GitHub/AAD_2022/Hadamard/arithmetic.vhd(4): (vcom-1598) Library "simplelogic" not found.
-# ** Error: /home/carlos/Documents/GitHub/AAD_2022/Hadamard/arithmetic.vhd(5): (vcom-1136) Unknown identifier "simpleLogic".
-# ** Note: /home/carlos/Documents/GitHub/AAD_2022/Hadamard/arithmetic.vhd(7): VHDL Compiler exiting
-# End time: 14:25:01 on Nov 13,2022, Elapsed time: 0:00:00
+# ** Error: /media/carlos/Windows-SSD/Users/carlo/Documents/GitHub/AAD_2022/Hadamard/arithmetic.vhd(4): (vcom-1598) Library "simplelogic" not found.
+# ** Error: /media/carlos/Windows-SSD/Users/carlo/Documents/GitHub/AAD_2022/Hadamard/arithmetic.vhd(5): (vcom-1136) Unknown identifier "simpleLogic".
+# ** Note: /media/carlos/Windows-SSD/Users/carlo/Documents/GitHub/AAD_2022/Hadamard/arithmetic.vhd(7): VHDL Compiler exiting
+# End time: 21:35:14 on Nov 13,2022, Elapsed time: 0:00:00
 # Errors: 2, Warnings: 0
 # ** Error: /home/carlos/intelFPGA_lite/20.1/modelsim_ase/linuxaloem/vcom failed.
 # Error in macro ./Hadamard_run_msim_rtl_vhdl.do line 8
 # /home/carlos/intelFPGA_lite/20.1/modelsim_ase/linuxaloem/vcom failed.
 #     while executing
-# "vcom -93 -work work {/home/carlos/Documents/GitHub/AAD_2022/Hadamard/arithmetic.vhd}"
-# 
-# stdin: <EOF>
-# Load canceled
+# "vcom -93 -work work {/media/carlos/Windows-SSD/Users/carlo/Documents/GitHub/AAD_2022/Hadamard/arithmetic.vhd}"

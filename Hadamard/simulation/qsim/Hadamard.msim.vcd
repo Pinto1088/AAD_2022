@@ -3,10 +3,10 @@ $comment
 		vcd file Hadamard.msim.vcd -direction
 $end
 $date
-	Tue Nov  8 20:01:06 2022
+	Sun Nov 13 21:36:56 2022
 $end
 $version
-	ModelSim Version 10.5b
+	ModelSim Version 2020.1
 $end
 $timescale
 	1ps
@@ -55,46 +55,46 @@ $var wire 1 E \msOut[1]~output_o\ $end
 $var wire 1 F \msOut[2]~output_o\ $end
 $var wire 1 G \msOut[3]~output_o\ $end
 $var wire 1 H \valid~output_o\ $end
-$var wire 1 I \yIn[0]~input_o\ $end
+$var wire 1 I \yIn[2]~input_o\ $end
 $var wire 1 J \yIn[3]~input_o\ $end
-$var wire 1 K \yIn[1]~input_o\ $end
-$var wire 1 L \c21~combout\ $end
-$var wire 1 M \yIn[2]~input_o\ $end
-$var wire 1 N \c20~combout\ $end
-$var wire 1 O \yIn[5]~input_o\ $end
-$var wire 1 P \yIn[7]~input_o\ $end
-$var wire 1 Q \c23~combout\ $end
-$var wire 1 R \yIn[6]~input_o\ $end
-$var wire 1 S \yIn[4]~input_o\ $end
-$var wire 1 T \c22~combout\ $end
-$var wire 1 U \s_valid~2_combout\ $end
-$var wire 1 V \c32~combout\ $end
-$var wire 1 W \c31~combout\ $end
-$var wire 1 X \c33~combout\ $end
-$var wire 1 Y \c30~combout\ $end
+$var wire 1 K \c11~combout\ $end
+$var wire 1 L \yIn[6]~input_o\ $end
+$var wire 1 M \yIn[7]~input_o\ $end
+$var wire 1 N \c13~combout\ $end
+$var wire 1 O \yIn[0]~input_o\ $end
+$var wire 1 P \yIn[1]~input_o\ $end
+$var wire 1 Q \c10~combout\ $end
+$var wire 1 R \yIn[4]~input_o\ $end
+$var wire 1 S \yIn[5]~input_o\ $end
+$var wire 1 T \c12~combout\ $end
+$var wire 1 U \s_valid~0_combout\ $end
+$var wire 1 V \c31~combout\ $end
+$var wire 1 W \c33~combout\ $end
+$var wire 1 X \c30~combout\ $end
+$var wire 1 Y \c32~combout\ $end
 $var wire 1 Z \s_valid~1_combout\ $end
-$var wire 1 [ \m1_one~0_combout\ $end
-$var wire 1 \ \c10~combout\ $end
-$var wire 1 ] \c11~combout\ $end
-$var wire 1 ^ \c12~combout\ $end
-$var wire 1 _ \c13~combout\ $end
-$var wire 1 ` \s_valid~0_combout\ $end
-$var wire 1 a \m_slash[1]~1_combout\ $end
-$var wire 1 b \m0_one~0_combout\ $end
-$var wire 1 c \m_slash[0]~0_combout\ $end
-$var wire 1 d \popCounter8|hA01|and20|y~combout\ $end
-$var wire 1 e \m2_one~0_combout\ $end
-$var wire 1 f \popCounter8|fA10|fA0|and20|y~combout\ $end
+$var wire 1 [ \c21~combout\ $end
+$var wire 1 \ \c23~combout\ $end
+$var wire 1 ] \c20~combout\ $end
+$var wire 1 ^ \c22~combout\ $end
+$var wire 1 _ \s_valid~2_combout\ $end
+$var wire 1 ` \s_valid~3_combout\ $end
+$var wire 1 a \m0_one~0_combout\ $end
+$var wire 1 b \m_slash[0]~0_combout\ $end
+$var wire 1 c \m2_one~0_combout\ $end
+$var wire 1 d \popCounter8|hA02|and20|y~combout\ $end
+$var wire 1 e \popCounter8|fA11|fA0|xor20|y~combout\ $end
+$var wire 1 f \s_valid~4_combout\ $end
 $var wire 1 g \popCounter8|fA20|hA0|and20|y~combout\ $end
-$var wire 1 h \popCounter8|fA10|fA0|xor21|y~0_combout\ $end
-$var wire 1 i \popCounter8|fA10|fA0|xor21|y~2_combout\ $end
-$var wire 1 j \popCounter8|fA10|fA0|xor21|y~1_combout\ $end
-$var wire 1 k \popCounter8|fA10|fA0|xor21|y~3_combout\ $end
-$var wire 1 l \popCounter8|hA02|and20|y~combout\ $end
-$var wire 1 m \popCounter8|fA11|fA0|xor20|y~combout\ $end
-$var wire 1 n \s_valid~4_combout\ $end
-$var wire 1 o \popCounter8|fA20|fA10|or20|y~0_combout\ $end
-$var wire 1 p \s_valid~3_combout\ $end
+$var wire 1 h \m1_one~0_combout\ $end
+$var wire 1 i \m_slash[1]~1_combout\ $end
+$var wire 1 j \popCounter8|fA10|fA0|xor21|y~0_combout\ $end
+$var wire 1 k \popCounter8|fA10|fA0|xor21|y~1_combout\ $end
+$var wire 1 l \popCounter8|fA10|fA0|xor21|y~2_combout\ $end
+$var wire 1 m \popCounter8|fA10|fA0|xor21|y~3_combout\ $end
+$var wire 1 n \popCounter8|fA20|fA10|or20|y~0_combout\ $end
+$var wire 1 o \popCounter8|hA01|and20|y~combout\ $end
+$var wire 1 p \popCounter8|fA10|fA0|and20|y~combout\ $end
 $var wire 1 q \popCounter8|fA11|fA0|and20|y~combout\ $end
 $var wire 1 r \msOut~0_combout\ $end
 $var wire 1 s \partial_decoder|xOut\ [7] $end
@@ -116,7 +116,7 @@ $upscope $end
 $enddefinitions $end
 #0
 $dumpvars
-1%
+x%
 0.
 1/
 x0
@@ -126,454 +126,91 @@ x0
 14
 15
 16
-1C
-1D
-0E
-0F
-1G
-1H
-0I
-1J
-1K
-0L
-0M
-0N
-1O
-1P
-0Q
-0R
-0S
-0T
-0U
-0V
-0W
-0X
-0Y
-0Z
-0[
-1\
-1]
-1^
-1_
-0`
-0a
-1b
-1c
-0d
-0e
-0f
-0g
-1h
-1i
-0j
-0k
-1l
-0m
-1n
-1o
-0p
-1q
-0r
-1!!
-1"!
-1&
-0'
-1(
-0)
-1*
-0+
-1,
-0-
-17
-08
-19
-0:
-1;
-0<
-1=
-0>
-1?
-0@
-0A
-1B
+xC
+xD
+xE
+xF
+xG
+xH
+xI
+xJ
+xK
+xL
+xM
+xN
+xO
+xP
+xQ
+xR
+xS
+xT
+xU
+xV
+xW
+xX
+xY
+xZ
+x[
+x\
+x]
+x^
+x_
+x`
+xa
+xb
+xc
+xd
+xe
+xf
+xg
+xh
+xi
+xj
+xk
+xl
+xm
+xn
+xo
+xp
+xq
+xr
+x!!
+x"!
+x7
+x8
+x9
+x:
+x;
+x<
+x=
+x>
+x?
+x@
+xA
+xB
 xs
 xt
 xu
 xv
 xw
 xx
-1y
+xy
 xz
 x{
-0|
+x|
 x}
 x~
-1!
-0"
-0#
-1$
+x!
+x"
+x#
+x$
+x&
+x'
+x(
+x)
+x*
+x+
+x,
+x-
 $end
-#120000
-0&
-0(
-0*
-0,
-0=
-0;
-09
-07
-0P
-0O
-0J
-0K
-0\
-0]
-1d
-0i
-0^
-0l
-0_
-1m
-0n
-0m
-0q
-1k
-1f
-0b
-0c
-1r
-0o
-0!!
-0r
-0d
-0y
-0h
-1l
-1m
-1q
-1!!
-0m
-0f
-0G
-0D
-1r
-0?
-0!!
-0B
-0!
-1D
-0$
-1B
-1$
-0D
-0B
-0$
-#140000
-1&
-1(
-1*
-1,
-1'
-1)
-1+
-1-
-1>
-1=
-1<
-1;
-1:
-19
-18
-17
-1P
-1R
-1O
-1S
-1J
-1M
-1K
-1I
-1d
-1i
-1j
-0l
-1m
-0m
-0q
-1f
-0r
-1!!
-1D
-1B
-1$
-#280000
-0&
-0(
-0*
-0,
-0'
-0)
-0+
-0-
-0>
-0=
-0<
-0;
-0:
-09
-08
-07
-0P
-0R
-0O
-0S
-0J
-0M
-0K
-0I
-0f
-0k
-0d
-0i
-0j
-1l
-1m
-1q
-0m
-1k
-1o
-1r
-0!!
-0r
-0o
-1!!
-1r
-0!!
-0D
-0B
-1D
-0$
-1B
-0D
-1$
-0B
-0$
-#300000
-1&
-1(
-1'
-1)
-1:
-19
-18
-17
-1P
-1R
-1O
-1S
-1Y
-1W
-0l
-1V
-1X
-1m
-0m
-0q
-1e
-1|
-0r
-1!!
-1y
-1i
-1l
-1m
-1q
-0k
-1E
-1D
-1r
-1o
-1A
-0!!
-1B
-1#
-0r
-1$
-1!!
-0D
-0B
-1D
-0$
-1B
-1$
-#420000
-0&
-0(
-0'
-0)
-0:
-09
-08
-07
-0P
-0R
-0O
-0S
-0Y
-0W
-0l
-0V
-0X
-0m
-0o
-1m
-0e
-0|
-1o
-1r
-0!!
-0r
-0y
-0i
-1l
-1!!
-0m
-1k
-0E
-0D
-0o
-0A
-0B
-0#
-1D
-1r
-0$
-0!!
-1B
-1$
-0D
-0B
-0$
-#450000
-1&
-1(
-1'
-1)
-1,
-1+
-1-
-1>
-1=
-1<
-1:
-19
-18
-17
-1P
-1R
-1O
-1S
-1M
-1K
-1I
-1L
-1i
-1]
-0l
-1X
-1m
-0m
-0q
-0k
-0r
-1!!
-1D
-1B
-1$
-#520000
-0&
-0(
-0'
-0)
-0,
-0+
-0-
-0>
-0=
-0<
-0:
-09
-08
-07
-0P
-0R
-0O
-0S
-0M
-0K
-0I
-0L
-0i
-0]
-1l
-0X
-1m
-1q
-1r
-1o
-0m
-1k
-0!!
-0o
-0r
-1!!
-1r
-0!!
-0D
-0B
-1D
-0$
-1B
-0D
-1$
-0B
-0$
-#540000
-1&
-1'
-18
-17
-1P
-1R
-1T
-1V
-1Q
-1X
-1m
-1Z
-1U
-1p
-0"!
-0H
-0C
-0%
-#640000
-0&
-0'
-08
-07
-0P
-0R
-0T
-0V
-0Q
-0X
-0m
-0Z
-0U
-0p
-1"!
-1H
-1C
-1%
 #1000000

@@ -1,6 +1,6 @@
--- Copyright (C) 2018  Intel Corporation. All rights reserved.
+-- Copyright (C) 2020  Intel Corporation. All rights reserved.
 -- Your use of Intel Corporation's design tools, logic functions 
--- and other software and tools, and its AMPP partner logic 
+-- and other software and tools, and any partner logic 
 -- functions, and any output files from any of the foregoing 
 -- (including device programming or simulation files), and any 
 -- associated documentation or information are expressly subject 
@@ -10,13 +10,14 @@
 -- agreement, including, without limitation, that your use is for
 -- the sole purpose of programming logic devices manufactured by
 -- Intel and sold by Intel or its authorized distributors.  Please
--- refer to the applicable agreement for further details.
+-- refer to the applicable agreement for further details, at
+-- https://fpgasoftware.intel.com/eula.
 
 -- VENDOR "Altera"
 -- PROGRAM "Quartus Prime"
--- VERSION "Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition"
+-- VERSION "Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition"
 
--- DATE "11/13/2022 15:59:20"
+-- DATE "11/13/2022 20:20:03"
 
 -- 
 -- Device: Altera EP4CGX15BF14C6 Package FBGA169
@@ -81,7 +82,7 @@ ENTITY 	EncoderSerial IS
 	clk : IN std_logic;
 	nRst : IN std_logic;
 	mIn : IN std_logic;
-	mOut : OUT std_logic_vector(7 DOWNTO 0)
+	mOut : BUFFER std_logic_vector(7 DOWNTO 0)
 	);
 END EncoderSerial;
 
@@ -140,7 +141,6 @@ SIGNAL \ControlUnit|Pstate~7_combout\ : std_logic;
 SIGNAL \ControlUnit|Pstate.s_3~q\ : std_logic;
 SIGNAL \ControlUnit|Pstate.s_3~clkctrl_outclk\ : std_logic;
 SIGNAL \mIn~input_o\ : std_logic;
-SIGNAL \flipFlopDPET|Q~feeder_combout\ : std_logic;
 SIGNAL \nRst~inputclkctrl_outclk\ : std_logic;
 SIGNAL \flipFlopDPET|Q~q\ : std_logic;
 SIGNAL \flipFlopDPET0|Q~0_combout\ : std_logic;
@@ -165,7 +165,6 @@ SIGNAL \flipFlopDPET4|Q~feeder_combout\ : std_logic;
 SIGNAL \flipFlopDPET4|Q~q\ : std_logic;
 SIGNAL \flipFlopF4|Q~q\ : std_logic;
 SIGNAL \flipFlopDPET5|Q~0_combout\ : std_logic;
-SIGNAL \flipFlopDPET5|Q~feeder_combout\ : std_logic;
 SIGNAL \flipFlopDPET5|Q~q\ : std_logic;
 SIGNAL \flipFlopF5|Q~feeder_combout\ : std_logic;
 SIGNAL \flipFlopF5|Q~q\ : std_logic;
@@ -339,22 +338,22 @@ PORT MAP (
 	i => ww_nRst,
 	o => \nRst~input_o\);
 
--- Location: LCCOMB_X31_Y12_N28
+-- Location: LCCOMB_X31_Y12_N24
 \ControlUnit|Pstate~8\ : cycloneiv_lcell_comb
 -- Equation(s):
 -- \ControlUnit|Pstate~8_combout\ = (\nRst~input_o\ & !\ControlUnit|Pstate.s_3~q\)
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0000000011001100",
+	lut_mask => "0000000010101010",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	datab => \nRst~input_o\,
+	dataa => \nRst~input_o\,
 	datad => \ControlUnit|Pstate.s_3~q\,
 	combout => \ControlUnit|Pstate~8_combout\);
 
--- Location: LCCOMB_X31_Y12_N20
+-- Location: LCCOMB_X31_Y12_N12
 \ControlUnit|Pstate.s_rst~feeder\ : cycloneiv_lcell_comb
 -- Equation(s):
 -- \ControlUnit|Pstate.s_rst~feeder_combout\ = \ControlUnit|Pstate~8_combout\
@@ -368,7 +367,7 @@ PORT MAP (
 	datab => \ControlUnit|Pstate~8_combout\,
 	combout => \ControlUnit|Pstate.s_rst~feeder_combout\);
 
--- Location: FF_X31_Y12_N21
+-- Location: FF_X31_Y12_N13
 \ControlUnit|Pstate.s_rst\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -382,7 +381,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \ControlUnit|Pstate.s_rst~q\);
 
--- Location: LCCOMB_X32_Y12_N26
+-- Location: LCCOMB_X32_Y12_N22
 \ControlUnit|Pstate~10\ : cycloneiv_lcell_comb
 -- Equation(s):
 -- \ControlUnit|Pstate~10_combout\ = (\nRst~input_o\ & !\ControlUnit|Pstate.s_rst~q\)
@@ -397,7 +396,7 @@ PORT MAP (
 	datad => \ControlUnit|Pstate.s_rst~q\,
 	combout => \ControlUnit|Pstate~10_combout\);
 
--- Location: FF_X32_Y12_N27
+-- Location: FF_X32_Y12_N23
 \ControlUnit|Pstate.s_0\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -411,7 +410,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \ControlUnit|Pstate.s_0~q\);
 
--- Location: LCCOMB_X32_Y12_N6
+-- Location: LCCOMB_X32_Y12_N24
 \ControlUnit|Pstate~11\ : cycloneiv_lcell_comb
 -- Equation(s):
 -- \ControlUnit|Pstate~11_combout\ = (\ControlUnit|Pstate.s_0~q\ & \nRst~input_o\)
@@ -426,7 +425,7 @@ PORT MAP (
 	datac => \nRst~input_o\,
 	combout => \ControlUnit|Pstate~11_combout\);
 
--- Location: FF_X32_Y12_N7
+-- Location: FF_X32_Y12_N25
 \ControlUnit|Pstate.s_1\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -447,11 +446,11 @@ PORT MAP (
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1100110000000000",
+	lut_mask => "1111000000000000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	datab => \nRst~input_o\,
+	datac => \nRst~input_o\,
 	datad => \ControlUnit|Pstate.s_1~q\,
 	combout => \ControlUnit|Pstate~9_combout\);
 
@@ -522,20 +521,6 @@ PORT MAP (
 	i => ww_mIn,
 	o => \mIn~input_o\);
 
--- Location: LCCOMB_X31_Y12_N12
-\flipFlopDPET|Q~feeder\ : cycloneiv_lcell_comb
--- Equation(s):
--- \flipFlopDPET|Q~feeder_combout\ = \mIn~input_o\
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1111111100000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datad => \mIn~input_o\,
-	combout => \flipFlopDPET|Q~feeder_combout\);
-
 -- Location: CLKCTRL_G19
 \nRst~inputclkctrl\ : cycloneiv_clkctrl
 -- pragma translate_off
@@ -549,7 +534,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	outclk => \nRst~inputclkctrl_outclk\);
 
--- Location: FF_X31_Y12_N13
+-- Location: FF_X31_Y12_N15
 \flipFlopDPET|Q\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -558,29 +543,30 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \clk~inputclkctrl_outclk\,
-	d => \flipFlopDPET|Q~feeder_combout\,
+	asdata => \mIn~input_o\,
 	clrn => \nRst~inputclkctrl_outclk\,
+	sload => VCC,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => \flipFlopDPET|Q~q\);
 
--- Location: LCCOMB_X31_Y12_N10
+-- Location: LCCOMB_X31_Y12_N28
 \flipFlopDPET0|Q~0\ : cycloneiv_lcell_comb
 -- Equation(s):
--- \flipFlopDPET0|Q~0_combout\ = \flipFlopDPET0|Q~q\ $ (((\flipFlopDPET|Q~q\ & \ControlUnit|Pstate.s_rst~q\)))
+-- \flipFlopDPET0|Q~0_combout\ = \flipFlopDPET0|Q~q\ $ (((\ControlUnit|Pstate.s_rst~q\ & \flipFlopDPET|Q~q\)))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0110011010101010",
+	lut_mask => "0111011110001000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \flipFlopDPET0|Q~q\,
+	dataa => \ControlUnit|Pstate.s_rst~q\,
 	datab => \flipFlopDPET|Q~q\,
-	datad => \ControlUnit|Pstate.s_rst~q\,
+	datad => \flipFlopDPET0|Q~q\,
 	combout => \flipFlopDPET0|Q~0_combout\);
 
--- Location: LCCOMB_X31_Y12_N26
+-- Location: LCCOMB_X31_Y12_N4
 \flipFlopDPET0|Q~feeder\ : cycloneiv_lcell_comb
 -- Equation(s):
 -- \flipFlopDPET0|Q~feeder_combout\ = \flipFlopDPET0|Q~0_combout\
@@ -594,7 +580,7 @@ PORT MAP (
 	datad => \flipFlopDPET0|Q~0_combout\,
 	combout => \flipFlopDPET0|Q~feeder_combout\);
 
--- Location: FF_X31_Y12_N27
+-- Location: FF_X31_Y12_N5
 \flipFlopDPET0|Q\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -609,7 +595,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \flipFlopDPET0|Q~q\);
 
--- Location: FF_X31_Y12_N29
+-- Location: FF_X31_Y12_N25
 \flipFlopF0|Q\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -625,24 +611,24 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \flipFlopF0|Q~q\);
 
--- Location: LCCOMB_X31_Y12_N18
+-- Location: LCCOMB_X31_Y12_N10
 \flipFlopDPET1|Q~0\ : cycloneiv_lcell_comb
 -- Equation(s):
--- \flipFlopDPET1|Q~0_combout\ = \flipFlopDPET1|Q~q\ $ (((\flipFlopDPET|Q~q\ & (\ControlUnit|Pstate.s_rst~q\ & !\ControlUnit|Pstate.s_0~q\))))
+-- \flipFlopDPET1|Q~0_combout\ = \flipFlopDPET1|Q~q\ $ (((\ControlUnit|Pstate.s_rst~q\ & (\flipFlopDPET|Q~q\ & !\ControlUnit|Pstate.s_0~q\))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1111000001111000",
+	lut_mask => "1100110001101100",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \flipFlopDPET|Q~q\,
-	datab => \ControlUnit|Pstate.s_rst~q\,
-	datac => \flipFlopDPET1|Q~q\,
+	dataa => \ControlUnit|Pstate.s_rst~q\,
+	datab => \flipFlopDPET1|Q~q\,
+	datac => \flipFlopDPET|Q~q\,
 	datad => \ControlUnit|Pstate.s_0~q\,
 	combout => \flipFlopDPET1|Q~0_combout\);
 
--- Location: LCCOMB_X31_Y12_N6
+-- Location: LCCOMB_X31_Y12_N20
 \flipFlopDPET1|Q~feeder\ : cycloneiv_lcell_comb
 -- Equation(s):
 -- \flipFlopDPET1|Q~feeder_combout\ = \flipFlopDPET1|Q~0_combout\
@@ -656,7 +642,7 @@ PORT MAP (
 	datad => \flipFlopDPET1|Q~0_combout\,
 	combout => \flipFlopDPET1|Q~feeder_combout\);
 
--- Location: FF_X31_Y12_N7
+-- Location: FF_X31_Y12_N21
 \flipFlopDPET1|Q\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -671,7 +657,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \flipFlopDPET1|Q~q\);
 
--- Location: LCCOMB_X31_Y12_N14
+-- Location: LCCOMB_X31_Y12_N6
 \flipFlopF1|Q~feeder\ : cycloneiv_lcell_comb
 -- Equation(s):
 -- \flipFlopF1|Q~feeder_combout\ = \flipFlopDPET1|Q~q\
@@ -685,7 +671,7 @@ PORT MAP (
 	datad => \flipFlopDPET1|Q~q\,
 	combout => \flipFlopF1|Q~feeder_combout\);
 
--- Location: FF_X31_Y12_N15
+-- Location: FF_X31_Y12_N7
 \flipFlopF1|Q\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -703,7 +689,7 @@ PORT MAP (
 -- Location: LCCOMB_X31_Y12_N2
 \flipFlopDPET2|Q~0\ : cycloneiv_lcell_comb
 -- Equation(s):
--- \flipFlopDPET2|Q~0_combout\ = \flipFlopDPET2|Q~q\ $ (((\flipFlopDPET|Q~q\ & (\ControlUnit|Pstate.s_rst~q\ & !\ControlUnit|Pstate.s_1~q\))))
+-- \flipFlopDPET2|Q~0_combout\ = \flipFlopDPET2|Q~q\ $ (((\ControlUnit|Pstate.s_rst~q\ & (\flipFlopDPET|Q~q\ & !\ControlUnit|Pstate.s_1~q\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -711,13 +697,13 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \flipFlopDPET|Q~q\,
-	datab => \ControlUnit|Pstate.s_rst~q\,
+	dataa => \ControlUnit|Pstate.s_rst~q\,
+	datab => \flipFlopDPET|Q~q\,
 	datac => \flipFlopDPET2|Q~q\,
 	datad => \ControlUnit|Pstate.s_1~q\,
 	combout => \flipFlopDPET2|Q~0_combout\);
 
--- Location: LCCOMB_X31_Y12_N30
+-- Location: LCCOMB_X31_Y12_N8
 \flipFlopDPET2|Q~feeder\ : cycloneiv_lcell_comb
 -- Equation(s):
 -- \flipFlopDPET2|Q~feeder_combout\ = \flipFlopDPET2|Q~0_combout\
@@ -731,7 +717,7 @@ PORT MAP (
 	datad => \flipFlopDPET2|Q~0_combout\,
 	combout => \flipFlopDPET2|Q~feeder_combout\);
 
--- Location: FF_X31_Y12_N31
+-- Location: FF_X31_Y12_N9
 \flipFlopDPET2|Q\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -762,24 +748,24 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \flipFlopF2|Q~q\);
 
--- Location: LCCOMB_X31_Y12_N16
+-- Location: LCCOMB_X31_Y12_N18
 \flipFlopDPET3|Q~0\ : cycloneiv_lcell_comb
 -- Equation(s):
 -- \flipFlopDPET3|Q~0_combout\ = \flipFlopDPET3|Q~q\ $ (((\flipFlopDPET|Q~q\ & ((\ControlUnit|Pstate.s_2~q\) # (\ControlUnit|Pstate.s_3~q\)))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0110011001101100",
+	lut_mask => "0001111111100000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \flipFlopDPET|Q~q\,
-	datab => \flipFlopDPET3|Q~q\,
-	datac => \ControlUnit|Pstate.s_2~q\,
-	datad => \ControlUnit|Pstate.s_3~q\,
+	dataa => \ControlUnit|Pstate.s_2~q\,
+	datab => \ControlUnit|Pstate.s_3~q\,
+	datac => \flipFlopDPET|Q~q\,
+	datad => \flipFlopDPET3|Q~q\,
 	combout => \flipFlopDPET3|Q~0_combout\);
 
--- Location: LCCOMB_X31_Y12_N8
+-- Location: LCCOMB_X31_Y12_N26
 \flipFlopDPET3|Q~feeder\ : cycloneiv_lcell_comb
 -- Equation(s):
 -- \flipFlopDPET3|Q~feeder_combout\ = \flipFlopDPET3|Q~0_combout\
@@ -793,7 +779,7 @@ PORT MAP (
 	dataa => \flipFlopDPET3|Q~0_combout\,
 	combout => \flipFlopDPET3|Q~feeder_combout\);
 
--- Location: FF_X31_Y12_N9
+-- Location: FF_X31_Y12_N27
 \flipFlopDPET3|Q\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -808,7 +794,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \flipFlopDPET3|Q~q\);
 
--- Location: FF_X31_Y12_N11
+-- Location: FF_X31_Y12_N29
 \flipFlopF3|Q\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -824,10 +810,10 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \flipFlopF3|Q~q\);
 
--- Location: LCCOMB_X31_Y12_N24
+-- Location: LCCOMB_X31_Y12_N16
 \flipFlopDPET4|Q~0\ : cycloneiv_lcell_comb
 -- Equation(s):
--- \flipFlopDPET4|Q~0_combout\ = \flipFlopDPET4|Q~q\ $ (((!\ControlUnit|Pstate.s_2~q\ & (\ControlUnit|Pstate.s_rst~q\ & \flipFlopDPET|Q~q\))))
+-- \flipFlopDPET4|Q~0_combout\ = \flipFlopDPET4|Q~q\ $ (((!\ControlUnit|Pstate.s_2~q\ & (\flipFlopDPET|Q~q\ & \ControlUnit|Pstate.s_rst~q\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -836,12 +822,12 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \ControlUnit|Pstate.s_2~q\,
-	datab => \ControlUnit|Pstate.s_rst~q\,
+	datab => \flipFlopDPET|Q~q\,
 	datac => \flipFlopDPET4|Q~q\,
-	datad => \flipFlopDPET|Q~q\,
+	datad => \ControlUnit|Pstate.s_rst~q\,
 	combout => \flipFlopDPET4|Q~0_combout\);
 
--- Location: LCCOMB_X31_Y12_N4
+-- Location: LCCOMB_X31_Y12_N30
 \flipFlopDPET4|Q~feeder\ : cycloneiv_lcell_comb
 -- Equation(s):
 -- \flipFlopDPET4|Q~feeder_combout\ = \flipFlopDPET4|Q~0_combout\
@@ -855,7 +841,7 @@ PORT MAP (
 	datad => \flipFlopDPET4|Q~0_combout\,
 	combout => \flipFlopDPET4|Q~feeder_combout\);
 
--- Location: FF_X31_Y12_N5
+-- Location: FF_X31_Y12_N31
 \flipFlopDPET4|Q\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -870,7 +856,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \flipFlopDPET4|Q~q\);
 
--- Location: FF_X31_Y12_N25
+-- Location: FF_X31_Y12_N17
 \flipFlopF4|Q\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -886,38 +872,24 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \flipFlopF4|Q~q\);
 
--- Location: LCCOMB_X32_Y12_N10
+-- Location: LCCOMB_X32_Y12_N18
 \flipFlopDPET5|Q~0\ : cycloneiv_lcell_comb
 -- Equation(s):
--- \flipFlopDPET5|Q~0_combout\ = \flipFlopDPET5|Q~q\ $ (((\flipFlopDPET|Q~q\ & ((\ControlUnit|Pstate.s_3~q\) # (\ControlUnit|Pstate.s_1~q\)))))
+-- \flipFlopDPET5|Q~0_combout\ = \flipFlopDPET5|Q~q\ $ (((\flipFlopDPET|Q~q\ & ((\ControlUnit|Pstate.s_1~q\) # (\ControlUnit|Pstate.s_3~q\)))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0011011011001100",
+	lut_mask => "0101011010101010",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \ControlUnit|Pstate.s_3~q\,
-	datab => \flipFlopDPET5|Q~q\,
-	datac => \ControlUnit|Pstate.s_1~q\,
+	dataa => \flipFlopDPET5|Q~q\,
+	datab => \ControlUnit|Pstate.s_1~q\,
+	datac => \ControlUnit|Pstate.s_3~q\,
 	datad => \flipFlopDPET|Q~q\,
 	combout => \flipFlopDPET5|Q~0_combout\);
 
--- Location: LCCOMB_X32_Y12_N20
-\flipFlopDPET5|Q~feeder\ : cycloneiv_lcell_comb
--- Equation(s):
--- \flipFlopDPET5|Q~feeder_combout\ = \flipFlopDPET5|Q~0_combout\
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1010101010101010",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \flipFlopDPET5|Q~0_combout\,
-	combout => \flipFlopDPET5|Q~feeder_combout\);
-
--- Location: FF_X32_Y12_N21
+-- Location: FF_X32_Y12_N13
 \flipFlopDPET5|Q\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -926,13 +898,14 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \clk~inputclkctrl_outclk\,
-	d => \flipFlopDPET5|Q~feeder_combout\,
+	asdata => \flipFlopDPET5|Q~0_combout\,
 	clrn => \nRst~inputclkctrl_outclk\,
+	sload => VCC,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => \flipFlopDPET5|Q~q\);
 
--- Location: LCCOMB_X32_Y12_N28
+-- Location: LCCOMB_X32_Y12_N26
 \flipFlopF5|Q~feeder\ : cycloneiv_lcell_comb
 -- Equation(s):
 -- \flipFlopF5|Q~feeder_combout\ = \flipFlopDPET5|Q~q\
@@ -946,7 +919,7 @@ PORT MAP (
 	datad => \flipFlopDPET5|Q~q\,
 	combout => \flipFlopF5|Q~feeder_combout\);
 
--- Location: FF_X32_Y12_N29
+-- Location: FF_X32_Y12_N27
 \flipFlopF5|Q\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -961,24 +934,24 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \flipFlopF5|Q~q\);
 
--- Location: LCCOMB_X32_Y12_N22
+-- Location: LCCOMB_X32_Y12_N20
 \flipFlopDPET6|Q~0\ : cycloneiv_lcell_comb
 -- Equation(s):
--- \flipFlopDPET6|Q~0_combout\ = \flipFlopDPET6|Q~q\ $ (((\flipFlopDPET|Q~q\ & ((\ControlUnit|Pstate.s_3~q\) # (\ControlUnit|Pstate.s_0~q\)))))
+-- \flipFlopDPET6|Q~0_combout\ = \flipFlopDPET6|Q~q\ $ (((\flipFlopDPET|Q~q\ & ((\ControlUnit|Pstate.s_0~q\) # (\ControlUnit|Pstate.s_3~q\)))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0001111011110000",
+	lut_mask => "0011011011001100",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \ControlUnit|Pstate.s_3~q\,
-	datab => \ControlUnit|Pstate.s_0~q\,
-	datac => \flipFlopDPET6|Q~q\,
+	dataa => \ControlUnit|Pstate.s_0~q\,
+	datab => \flipFlopDPET6|Q~q\,
+	datac => \ControlUnit|Pstate.s_3~q\,
 	datad => \flipFlopDPET|Q~q\,
 	combout => \flipFlopDPET6|Q~0_combout\);
 
--- Location: LCCOMB_X32_Y12_N12
+-- Location: LCCOMB_X32_Y12_N28
 \flipFlopDPET6|Q~feeder\ : cycloneiv_lcell_comb
 -- Equation(s):
 -- \flipFlopDPET6|Q~feeder_combout\ = \flipFlopDPET6|Q~0_combout\
@@ -992,7 +965,7 @@ PORT MAP (
 	datab => \flipFlopDPET6|Q~0_combout\,
 	combout => \flipFlopDPET6|Q~feeder_combout\);
 
--- Location: FF_X32_Y12_N13
+-- Location: FF_X32_Y12_N29
 \flipFlopDPET6|Q\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -1036,23 +1009,23 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \flipFlopF6|Q~q\);
 
--- Location: LCCOMB_X32_Y12_N16
+-- Location: LCCOMB_X32_Y12_N8
 \flipFlopDPET7|Q~0\ : cycloneiv_lcell_comb
 -- Equation(s):
 -- \flipFlopDPET7|Q~0_combout\ = \flipFlopDPET7|Q~q\ $ (((\ControlUnit|Pstate.s_3~q\ & \flipFlopDPET|Q~q\)))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0011110011001100",
+	lut_mask => "0110011011001100",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
+	dataa => \ControlUnit|Pstate.s_3~q\,
 	datab => \flipFlopDPET7|Q~q\,
-	datac => \ControlUnit|Pstate.s_3~q\,
 	datad => \flipFlopDPET|Q~q\,
 	combout => \flipFlopDPET7|Q~0_combout\);
 
--- Location: LCCOMB_X32_Y12_N18
+-- Location: LCCOMB_X32_Y12_N16
 \flipFlopDPET7|Q~feeder\ : cycloneiv_lcell_comb
 -- Equation(s):
 -- \flipFlopDPET7|Q~feeder_combout\ = \flipFlopDPET7|Q~0_combout\
@@ -1066,7 +1039,7 @@ PORT MAP (
 	dataa => \flipFlopDPET7|Q~0_combout\,
 	combout => \flipFlopDPET7|Q~feeder_combout\);
 
--- Location: FF_X32_Y12_N19
+-- Location: FF_X32_Y12_N17
 \flipFlopDPET7|Q\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -1081,7 +1054,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \flipFlopDPET7|Q~q\);
 
--- Location: LCCOMB_X32_Y12_N24
+-- Location: LCCOMB_X32_Y12_N10
 \flipFlopF7|Q~feeder\ : cycloneiv_lcell_comb
 -- Equation(s):
 -- \flipFlopF7|Q~feeder_combout\ = \flipFlopDPET7|Q~q\
@@ -1095,7 +1068,7 @@ PORT MAP (
 	datad => \flipFlopDPET7|Q~q\,
 	combout => \flipFlopF7|Q~feeder_combout\);
 
--- Location: FF_X32_Y12_N25
+-- Location: FF_X32_Y12_N11
 \flipFlopF7|Q\ : dffeas
 -- pragma translate_off
 GENERIC MAP (

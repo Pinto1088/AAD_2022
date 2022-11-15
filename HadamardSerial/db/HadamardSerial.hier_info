@@ -28,14 +28,14 @@ nRst => flipflopdpet:flipFlopF5.nRst
 nRst => flipflopdpet:flipFlopF6.nRst
 nRst => flipflopdpet:flipFlopF7.nRst
 mIn => flipflopdpet:flipFlopDPET.D
-mOut[0] <= flipflopdpet:flipFlopF0.Q
-mOut[1] <= flipflopdpet:flipFlopF1.Q
-mOut[2] <= flipflopdpet:flipFlopF2.Q
-mOut[3] <= flipflopdpet:flipFlopF3.Q
-mOut[4] <= flipflopdpet:flipFlopF4.Q
-mOut[5] <= flipflopdpet:flipFlopF5.Q
-mOut[6] <= flipflopdpet:flipFlopF6.Q
-mOut[7] <= flipflopdpet:flipFlopF7.Q
+mOut[0] << flipflopdpet:flipFlopF0.Q
+mOut[1] << flipflopdpet:flipFlopF1.Q
+mOut[2] << flipflopdpet:flipFlopF2.Q
+mOut[3] << flipflopdpet:flipFlopF3.Q
+mOut[4] << flipflopdpet:flipFlopF4.Q
+mOut[5] << flipflopdpet:flipFlopF5.Q
+mOut[6] << flipflopdpet:flipFlopF6.Q
+mOut[7] << flipflopdpet:flipFlopF7.Q
 
 
 |EncoderSerial|ControlUnit:ControlUnit
