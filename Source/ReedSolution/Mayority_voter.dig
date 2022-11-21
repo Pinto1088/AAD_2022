@@ -73,11 +73,10 @@ Full-Adder</string>
         </entry>
         <entry>
           <string>Description</string>
-          <string>2-Bit
-Full-Adder</string>
+          <string>8-Bit Population Counter</string>
         </entry>
       </elementAttributes>
-      <pos x="380" y="440"/>
+      <pos x="320" y="440"/>
     </visualElement>
     <visualElement>
       <elementName>Text</elementName>
@@ -343,6 +342,16 @@ Full-Adder</string>
       <elementName>Half-Adder_1Bit.dig</elementName>
       <elementAttributes/>
       <pos x="260" y="340"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Text</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Description</string>
+          <string>Total Cost: 5XOR gates + 1AND gate + 2OR gate</string>
+        </entry>
+      </elementAttributes>
+      <pos x="200" y="560"/>
     </visualElement>
   </visualElements>
   <wires>
