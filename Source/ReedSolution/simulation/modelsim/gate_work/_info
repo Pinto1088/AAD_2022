@@ -1,0 +1,109 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/mnt/ntfs/Users/carlo/Documents/GitHub/AAD_2022/Source/ReedSolution/simulation/modelsim
+Edecodersimp
+Z1 w1668949348
+Z2 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+Z3 DPx9 cycloneiv 19 cycloneiv_atom_pack 0 22 ]lnLY_M[kb3fWjbKaDc;_1
+Z4 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+Z5 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z6 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+Z7 DPx9 cycloneiv 20 cycloneiv_components 0 22 J>QEYeEXjZb^Cnb3?e1D40
+!i122 0
+R0
+Z8 8Hadamard.vho
+Z9 FHadamard.vho
+l0
+L78 1
+V2^[SM2Fb62X:TPfdhV`V93
+!s100 8zQ3@IYKQRUHQm;V18JXH0
+Z10 OV;C;2020.1;71
+31
+Z11 !s110 1668949482
+!i10b 1
+Z12 !s108 1668949482.000000
+Z13 !s90 -reportprogress|300|-93|-work|work|Hadamard.vho|
+!s107 Hadamard.vho|
+!i113 1
+Z14 o-93 -work work
+Z15 tExplicit 1 CvgOpt 0
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+DEx4 work 11 decodersimp 0 22 2^[SM2Fb62X:TPfdhV`V93
+!i122 0
+l196
+L116 809
+V4gOZJP:7ezVXK5^bZ16b32
+!s100 ?n7^od5;?5Go97Tz@6`4h2
+R10
+31
+R11
+!i10b 1
+R12
+R13
+Z16 !s107 Hadamard.vho|
+!i113 1
+R14
+R15
+Ehard_block
+R1
+R2
+R3
+R4
+R5
+R6
+R7
+!i122 0
+R0
+R8
+R9
+l0
+L35 1
+V76aj<:WibK80zY@D=^CB^1
+!s100 Q?IbEnM>aW3cc=hi`GCc71
+R10
+31
+R11
+!i10b 1
+R12
+R13
+R16
+!i113 1
+R14
+R15
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+DEx4 work 10 hard_block 0 22 76aj<:WibK80zY@D=^CB^1
+!i122 0
+l65
+L51 20
+V_a9RmgR2_`Dd@HZno0MBX1
+!s100 O>:lWQfHCcIaXgQ<=Tgn10
+R10
+31
+R11
+!i10b 1
+R12
+R13
+R16
+!i113 1
+R14
+R15

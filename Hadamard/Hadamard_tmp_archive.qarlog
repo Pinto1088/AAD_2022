@@ -1,0 +1,27 @@
+Quartus Prime Archive log --	C:/Users/carlo/Documents/GitHub/AAD_2022/Hadamard/Hadamard_tmp_archive.qarlog
+
+Archive:	C:/Users/carlo/Documents/GitHub/AAD_2022/Hadamard/Hadamard_tmp_archive.qar
+Date:		Fri Nov 18 21:34:51 2022
+Quartus Prime		20.1.1 Build 720 11/11/2020 SJ Lite Edition
+
+	=========== Files Selected: ===========
+C:/Users/carlo/Documents/GitHub/AAD_2022/Hadamard/Decoder.vhd
+C:/Users/carlo/Documents/GitHub/AAD_2022/Hadamard/Encoder.vhd
+C:/Users/carlo/Documents/GitHub/AAD_2022/Hadamard/Hadamard.qpf
+C:/Users/carlo/Documents/GitHub/AAD_2022/Hadamard/Hadamard.qsf
+C:/Users/carlo/Documents/GitHub/AAD_2022/Hadamard/Hadamard_assignment_defaults.qdf
+C:/Users/carlo/Documents/GitHub/AAD_2022/Hadamard/Waveform.vwf
+C:/Users/carlo/Documents/GitHub/AAD_2022/Hadamard/Waveform1.vwf
+C:/Users/carlo/Documents/GitHub/AAD_2022/Hadamard/arithmetic.vhd
+C:/Users/carlo/Documents/GitHub/AAD_2022/Hadamard/popCounter_8bitParallelOpt.vhd
+C:/Users/carlo/Documents/GitHub/AAD_2022/Hadamard/simpleLogic.vhd
+	======= Total: 10 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.
+
+
+******* Archived project restoration attempt on Fri Nov 18 21:34:53 2022
+Source archive file:	C:/Users/carlo/Documents/GitHub/AAD_2022/Hadamard/Hadamard_tmp_archive.qar
+Archive was extracted into	C:/Users/carlo/Documents/GitHub/AAD_2022/Source/ReedSolution/
+		 - successfully.

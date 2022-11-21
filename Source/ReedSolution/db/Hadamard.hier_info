@@ -1,0 +1,294 @@
+|main
+y7 => n3_input_decoder:gate0.y7
+y7 => reed_decoder:gate1.y7
+y6 => n3_input_decoder:gate0.y6
+y6 => reed_decoder:gate1.y6
+y5 => n3_input_decoder:gate0.y5
+y5 => reed_decoder:gate1.y5
+y4 => n3_input_decoder:gate0.y4
+y4 => reed_decoder:gate1.y4
+y3 => n3_input_decoder:gate0.y3
+y3 => reed_decoder:gate1.y3
+y2 => n3_input_decoder:gate0.y2
+y2 => reed_decoder:gate1.y2
+y1 => n3_input_decoder:gate0.y1
+y1 => reed_decoder:gate1.y1
+y0 => n3_input_decoder:gate0.y0
+y0 => reed_decoder:gate1.y0
+m0 <= n3_input_decoder:gate0.m0_0
+m1 <= n3_input_decoder:gate0.m0_1
+m2 <= n3_input_decoder:gate0.m0_2
+m3 <= mayority_voter:gate2.m0_3
+NoErrors <= validit_error_display:gate3.Valid_No_Errors
+E2 <= validit_error_display:gate3.n2_Errors
+E1 <= validit_error_display:gate3.n1_Error
+
+
+|main|n3_input_decoder:gate0
+y7 => mo:gate0.Hi
+y7 => mo:gate1.Hi
+y7 => mo:gate2.Hi
+y6 => mo:gate0.Gi
+y6 => mo:gate1.Fi
+y6 => mo:gate2.Fi
+y5 => mo:gate0.Fi
+y5 => mo:gate1.Gi
+y5 => mo:gate2.Di
+y4 => mo:gate0.Ei
+y4 => mo:gate1.Ei
+y4 => mo:gate2.Bi
+y3 => mo:gate0.Di
+y3 => mo:gate1.Di
+y3 => mo:gate2.Gi
+y2 => mo:gate0.Ci
+y2 => mo:gate1.Bi
+y2 => mo:gate2.Ei
+y1 => mo:gate0.Bi
+y1 => mo:gate1.Ci
+y1 => mo:gate2.Ci
+y0 => mo:gate0.Ai
+y0 => mo:gate1.Ai
+y0 => mo:gate2.Ai
+m0_2 <= mo:gate2.Mo
+m0_1 <= mo:gate1.Mo
+m0_0 <= mo:gate0.Mo
+
+
+|main|n3_input_decoder:gate0|Mo:gate0
+Hi => Mo.IN0
+Gi => Mo.IN1
+Fi => Mo.IN0
+Di => Mo.IN0
+Ci => Mo.IN1
+Ei => Mo.IN1
+Bi => Mo.IN0
+Ai => Mo.IN1
+Mo <= Mo.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|n3_input_decoder:gate0|Mo:gate1
+Hi => Mo.IN0
+Gi => Mo.IN1
+Fi => Mo.IN0
+Di => Mo.IN0
+Ci => Mo.IN1
+Ei => Mo.IN1
+Bi => Mo.IN0
+Ai => Mo.IN1
+Mo <= Mo.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|n3_input_decoder:gate0|Mo:gate2
+Hi => Mo.IN0
+Gi => Mo.IN1
+Fi => Mo.IN0
+Di => Mo.IN0
+Ci => Mo.IN1
+Ei => Mo.IN1
+Bi => Mo.IN0
+Ai => Mo.IN1
+Mo <= Mo.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|Reed_decoder:gate1
+y7 => m3_7.IN0
+y6 => m3_6.IN0
+y5 => m3_5.IN0
+y4 => m3_4.IN0
+y3 => m3_3.IN0
+y2 => m3_2.IN0
+y1 => m3_1.IN0
+y0 => m3_0.DATAIN
+m2 => m3_5.IN1
+m2 => m3_4.IN1
+m2 => m3_6.IN1
+m2 => m3_7.IN1
+m1 => m3_3.IN1
+m1 => m3_2.IN1
+m1 => m3_6.IN1
+m1 => m3_7.IN1
+m0 => m3_1.IN1
+m0 => m3_3.IN1
+m0 => m3_5.IN1
+m0 => m3_7.IN1
+m3_7 <= m3_7.DB_MAX_OUTPUT_PORT_TYPE
+m3_6 <= m3_6.DB_MAX_OUTPUT_PORT_TYPE
+m3_5 <= m3_5.DB_MAX_OUTPUT_PORT_TYPE
+m3_4 <= m3_4.DB_MAX_OUTPUT_PORT_TYPE
+m3_3 <= m3_3.DB_MAX_OUTPUT_PORT_TYPE
+m3_2 <= m3_2.DB_MAX_OUTPUT_PORT_TYPE
+m3_1 <= m3_1.DB_MAX_OUTPUT_PORT_TYPE
+m3_0 <= y0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|Mayority_voter:gate2
+m3_0 => half_adder_1bit:gate3.cI
+m3_1 => half_adder_1bit:gate3.a
+m3_2 => half_adder_1bit:gate2.cI
+m3_3 => half_adder_1bit:gate2.a
+m3_5 => half_adder_1bit:gate1.a
+m3_4 => half_adder_1bit:gate1.cI
+m3_7 => half_adder_1bit:gate0.a
+m3_6 => half_adder_1bit:gate0.cI
+m3_d <= full_adder_6bit:gate6.s_0
+m3_c <= full_adder_6bit:gate6.s_1
+m3_b <= full_adder_6bit:gate6.s_2
+m3_a <= full_adder_6bit:gate6.Co
+m0_3 <= m0_3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|Mayority_voter:gate2|Half_Adder_1Bit:gate0
+cI => s.IN0
+cI => cO.IN0
+a => s.IN1
+a => cO.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cO <= cO.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|Mayority_voter:gate2|Half_Adder_1Bit:gate1
+cI => s.IN0
+cI => cO.IN0
+a => s.IN1
+a => cO.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cO <= cO.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|Mayority_voter:gate2|Half_Adder_1Bit:gate2
+cI => s.IN0
+cI => cO.IN0
+a => s.IN1
+a => cO.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cO <= cO.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|Mayority_voter:gate2|Half_Adder_1Bit:gate3
+cI => s.IN0
+cI => cO.IN0
+a => s.IN1
+a => cO.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cO <= cO.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|Mayority_voter:gate2|Full_Adder_4Bit_woci:gate4
+a_0 => half_adder_1bit:gate0.a
+b_0 => half_adder_1bit:gate0.cI
+a_1 => full_adder_1bit:gate1.a
+b_1 => full_adder_1bit:gate1.b
+s_0 <= half_adder_1bit:gate0.s
+s_1 <= full_adder_1bit:gate1.s
+Co <= full_adder_1bit:gate1.cO
+
+
+|main|Mayority_voter:gate2|Full_Adder_4Bit_woci:gate4|Half_Adder_1Bit:gate0
+cI => s.IN0
+cI => cO.IN0
+a => s.IN1
+a => cO.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cO <= cO.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|Mayority_voter:gate2|Full_Adder_4Bit_woci:gate4|Full_Adder_1Bit:gate1
+a => s0.IN0
+a => cO.IN0
+b => s0.IN1
+b => cO.IN1
+cI => cO.IN1
+cI => s.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cO <= cO.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|Mayority_voter:gate2|Full_Adder_4Bit_woci:gate5
+a_0 => half_adder_1bit:gate0.a
+b_0 => half_adder_1bit:gate0.cI
+a_1 => full_adder_1bit:gate1.a
+b_1 => full_adder_1bit:gate1.b
+s_0 <= half_adder_1bit:gate0.s
+s_1 <= full_adder_1bit:gate1.s
+Co <= full_adder_1bit:gate1.cO
+
+
+|main|Mayority_voter:gate2|Full_Adder_4Bit_woci:gate5|Half_Adder_1Bit:gate0
+cI => s.IN0
+cI => cO.IN0
+a => s.IN1
+a => cO.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cO <= cO.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|Mayority_voter:gate2|Full_Adder_4Bit_woci:gate5|Full_Adder_1Bit:gate1
+a => s0.IN0
+a => cO.IN0
+b => s0.IN1
+b => cO.IN1
+cI => cO.IN1
+cI => s.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cO <= cO.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|Mayority_voter:gate2|Full_Adder_6Bit:gate6
+a_0 => half_adder_1bit:gate0.a
+b_0 => half_adder_1bit:gate0.cI
+a_1 => full_adder_1bit:gate1.a
+b_1 => full_adder_1bit:gate1.b
+a_2 => full_adder_1bit:gate2.a
+b_2 => full_adder_1bit:gate2.b
+s_0 <= half_adder_1bit:gate0.s
+s_1 <= full_adder_1bit:gate1.s
+s_2 <= full_adder_1bit:gate2.s
+Co <= full_adder_1bit:gate2.cO
+
+
+|main|Mayority_voter:gate2|Full_Adder_6Bit:gate6|Half_Adder_1Bit:gate0
+cI => s.IN0
+cI => cO.IN0
+a => s.IN1
+a => cO.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cO <= cO.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|Mayority_voter:gate2|Full_Adder_6Bit:gate6|Full_Adder_1Bit:gate1
+a => s0.IN0
+a => cO.IN0
+b => s0.IN1
+b => cO.IN1
+cI => cO.IN1
+cI => s.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cO <= cO.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|Mayority_voter:gate2|Full_Adder_6Bit:gate6|Full_Adder_1Bit:gate2
+a => s0.IN0
+a => cO.IN0
+b => s0.IN1
+b => cO.IN1
+cI => cO.IN1
+cI => s.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cO <= cO.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|Validit_error_display:gate3
+m3_d => n1_Error_temp.IN0
+m3_d => n1_Error_temp.IN0
+m3_d => Valid_No_Errors_temp.IN1
+m3_c => n1_Error_temp.IN1
+m3_c => Valid_No_Errors_temp.IN0
+m3_b => n1_Error_temp.IN1
+m3_b => Valid_No_Errors_temp.IN1
+m3_a => n1_Error_temp.IN1
+m3_a => n1_Error_temp.IN1
+n2_Errors <= n2_Errors.DB_MAX_OUTPUT_PORT_TYPE
+n1_Error <= n1_Error_temp.DB_MAX_OUTPUT_PORT_TYPE
+Valid_No_Errors <= Valid_No_Errors_temp.DB_MAX_OUTPUT_PORT_TYPE
+
+
