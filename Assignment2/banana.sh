@@ -25,3 +25,7 @@ do
    ./cryptCuda >> Result_x1.txt
    wait
 done
+
+
+expand _f:* "C:\Users\cvidal\Downloads\windows10.0-kb5018419-x64_08f6e9eb4e8cb9f7af2b152e6dea624490a60b2d.msu" "C:\Users\cvidal\Downloads\kb5018419"
+dism /online /add-package /packagepath:"C:\Users\cvidal\Downloads\kb5018419\Windows10.0-KB5018419-x64.cab"
