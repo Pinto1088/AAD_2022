@@ -2,7 +2,7 @@
 sshpass -f password scp CodeSamples.zip aad31@banana.ua.pt:/home/aad/aad31
 sshpass -f password scp cryptCuda.zip aad31@banana.ua.pt:/home/aad/aad31
 sshpass -f password scp matrixMult.zip aad31@banana.ua.pt:/home/aad/aad31
-sshpass -f password ssh aad31@banana.ua.pt unzip -uq cryptCuda.zip'
+sshpass -f password ssh aad31@banana.ua.pt unzip -uq cryptCuda.zip
 sshpass -f password scp runCryptCudaStride.sh aad31@banana.ua.pt:/home/aad/aad31/cryptCuda
 sshpass -f password ssh aad31@banana.ua.pt 'cd /home/aad/aad31/cryptCuda ; ./runCryptCudaStride.sh'
 sshpass -f password scp aad31@banana.ua.pt:/home/aad/aad31/cryptCuda/crypt.zip ./
