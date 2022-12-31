@@ -74,7 +74,7 @@ int main (int argc, char **argv)
   */
   unsigned int gridDimX,gridDimY,gridDimZ,blockDimX,blockDimY,blockDimZ;
 
-  blockDimX = 1 << 0;                                             // optimize!
+  blockDimX = 1 << 0;        //x << y is x * 2^y                  // optimize!
   blockDimY = 1 << 0;                                             // optimize!
   blockDimZ = 1 << 0;                                             // do not change!
   gridDimX = 1 << 10;                                             // optimize!
